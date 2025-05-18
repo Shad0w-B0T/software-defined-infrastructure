@@ -1,7 +1,10 @@
-# Exercise 2
+# Server Recreat
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+This section explains how to recreate a server using the Hetzner Cloud Console.
 
-## Syntax Highlighting
+- Using the Recreate option to redeploy a server with the same settings
+- Why SSH shows a host key mismatch warning after recreating
+- How to resolve the SSH warning by updating or removing the old host key
+- An optional workaround to bypass host key checks (not recommended for production)
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+By the end, you'll understand how to safely reconnect to a recreated server.
