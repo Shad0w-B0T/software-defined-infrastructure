@@ -9,7 +9,7 @@ To manage or reset the root password manually, follow these steps:
 3. Click on **Reset Root Password** to generate a new one.
 
 <ImageWithCaption
-  src="./root_password_1.png"
+  src="/images/exercise_1/root_password_1.png"
   alt="Server UI"
   :caption="'Location of the root password reset option in the Hetzner interface'"
   :number="1"
@@ -18,7 +18,7 @@ To manage or reset the root password manually, follow these steps:
 After clicking **Reset Root Password**, a new password will be generated and displayed in the panel:
 
 <ImageWithCaption
-  src="./root_password_2.png"
+  src="/images/exercise_1/root_password_2.png"
   alt="Server UI"
   :caption="'The newly generated root password is shown here after reset'"
   :number="2"

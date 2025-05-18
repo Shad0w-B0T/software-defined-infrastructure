@@ -10,7 +10,7 @@ A firewall controls which traffic is allowed to reach your server. We'll now con
 Select Firewalls → Create Firewall.
 
 <ImageWithCaption
-  src="./firewall_1.png"
+  src="/images/exercise_1/firewall_1.png"
   alt="Server UI"
   :caption="'Navigating to firewall creation in the Hetzner Console.'"
   :number="1"
@@ -21,7 +21,7 @@ Select Firewalls → Create Firewall.
 Click on Create Firewall and adjust the settings to your needs.
 
 <ImageWithCaption
-  src="./firewall_2.png"
+  src="/images/exercise_1/firewall_2.png"
   alt="Server UI"
   :caption="'Customizing rules for your new firewall.'"
   :number="2"
@@ -41,7 +41,7 @@ These are essential for server management.
 Choose a descriptive name like basic-firewall so you can reuse it easily for other servers.
 
 <ImageWithCaption
-  src="./firewall_3.png"
+  src="/images/exercise_1/firewall_3.png"
   alt="Server UI"
   :caption="'Naming the firewall for easier identification.'"
   :number="3"
@@ -54,7 +54,7 @@ You can either accept the default name or set it to something meaningful, like b
 Once you’re done configuring, click Create.
 
 <ImageWithCaption
-  src="./firewall_4.png"
+  src="/images/exercise_1/firewall_4.png"
   alt="Server UI"
   :caption="'The firewall is now ready for use and can be assigned to any server.'"
   :number="4"
