@@ -85,7 +85,7 @@ If you need direct access to your server’s terminal, you can use the Hetzner C
 2. Locate the **Console** tab or button as shown below:
 
 <ImageWithCaption
-  src="./connect_1.png"
+  src="/images/exercise_1/connect_1.png"
   alt="Server UI"
   :caption="'Location of the console access button in the Hetzner interface'"
   :number="1"
@@ -94,7 +94,7 @@ If you need direct access to your server’s terminal, you can use the Hetzner C
 3. Click the console button to open a web-based terminal that connects you directly to your server.
 
 <ImageWithCaption
-  src="./connect_2.png"
+  src="/images/exercise_1/connect_2.png"
   alt="Server UI"
   :caption="'Simple and immediate console connection via web interface'"
   :number="2"
