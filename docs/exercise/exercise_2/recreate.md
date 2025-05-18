@@ -1,7 +1,7 @@
 # Reacreate
 
 <ImageWithCaption
-  src="./recreate_1.png"
+  src="/images/exercise_2/recreate_1.png"
   alt="Server UI"
   :caption="'Possible to recreate'"
   :number="1"

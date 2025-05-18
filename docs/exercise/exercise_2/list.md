@@ -6,7 +6,7 @@ To view all IP addresses associated with your servers:
 2. Select **Primary IPs** from the menu.
 
 <ImageWithCaption
-  src="./list_1.png"
+  src="/images/exercise_2/list_1.png"
   alt="Server UI"
   :caption="'Overview of all assigned and unassigned IP addresses'"
   :number="1"
