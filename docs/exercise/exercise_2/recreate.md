@@ -1,4 +1,4 @@
-# Reacreate
+# Re-creation
 
 <ImageWithCaption
   src="/images/exercise_2/recreate_1.png"

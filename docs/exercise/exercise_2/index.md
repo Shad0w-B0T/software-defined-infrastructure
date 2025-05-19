@@ -1,4 +1,4 @@
-# Server Recreat
+# Server re-creation
 
 This section explains how to recreate a server using the Hetzner Cloud Console.
 
