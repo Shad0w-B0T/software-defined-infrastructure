@@ -9,6 +9,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "vitepress-plugin-mermaid": "^2.0.17"
   }
 }
