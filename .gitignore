@@ -302,3 +302,11 @@ TODOs.md
 .vscode
 docs/.vitepress/dist/
 .idea/
+
+# Ignore Terraform state and secrets
+*.tfstate
+*.tfstate.*
+*.backup
+.terraform/
+secrets.auto.tfvars
+providertoken.key
