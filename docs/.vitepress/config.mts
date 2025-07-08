@@ -108,7 +108,9 @@ export default defineConfig({
             {
                 text: "10. Using the tail -f command",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Description", link: "/exercise/exercise_10/index.md"},
+                ],
             },
             {
                 text: "11. Incrementally creating a base system",
