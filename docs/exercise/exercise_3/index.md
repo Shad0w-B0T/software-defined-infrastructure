@@ -69,7 +69,7 @@ root@debian-2gb-hel1-1:~# hostname
 debian-2gb-hel1-1
 ```
 
-5. Update & Reboot for Security
+## 5. Update & Reboot for Security
 
 Keep your server packages up-to-date for protection against vulnerabilities:
 

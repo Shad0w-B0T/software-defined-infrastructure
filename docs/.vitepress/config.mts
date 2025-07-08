@@ -93,13 +93,17 @@ export default defineConfig({
             {
                 text: "8. ssh X11 forwarding",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Description", link: "/exercise/exercise_8/index.md"},
+                ],
             },
 
             {
                 text: "9. Enabling index based file search",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Description", link: "/exercise/exercise_9/index.md"},
+                ],
             },
             {
                 text: "10. Using the tail -f command",
