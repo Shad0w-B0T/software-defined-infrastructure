@@ -85,7 +85,9 @@ export default defineConfig({
             {
                 text: "7. ssh port forwarding",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Description", link: "/exercise/exercise_7/index.md"},
+                ],
             },
 
             {
