@@ -15,13 +15,15 @@ export default defineConfig({
 
         sidebar: [
             {
-                text: "Tools",
+                text: "0. Tools",
+                collapsed: true,
                 items: [
                     {text: "Collection", link: "/collection/terraform.md"},
                 ],
             },
             {
-                text: "Server creation",
+                text: "1. Server creation",
+                collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_1/index.md"},
                     {text: "Firewall", link: "/exercise/exercise_1/firewall.md"},
@@ -38,7 +40,8 @@ export default defineConfig({
                 ],
             },
             {
-                text: "Server re-creation",
+                text: "2. Server re-creation",
+                collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_2/index.md"},
                     {text: "List ip's", link: "/exercise/exercise_2/list.md"},
@@ -49,53 +52,129 @@ export default defineConfig({
                 ],
             },
             {
-                text: "Improve your server's security!",
+                text: "3. Improve your server's security!",
+                collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_3/index.md"},
                     {text: "Create SSH Key", link: "/exercise/exercise_3/ssh.md"},
                 ],
             },
             {
-                text: "ssh-agent installation",
+                text: "4. ssh-agent installation",
+                collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_4/index.md"},
                 ],
             },
             {
-                text: "MI Gitlab access by ssh",
+                text: "5. MI Gitlab access by ssh",
+                collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_5/index.md"},
                 ],
             },
             {
-                text: "ssh host hopping",
+                text: "6. ssh host hopping",
+                collapsed: true,
+                items: [
+                    {text: "Description", link: "/exercise/exercise_6/index.md"},
+                ],
+            },
+
+            {
+                text: "7. ssh port forwarding",
+                collapsed: true,
                 items: [],
             },
 
             {
-                text: "ssh port forwarding",
+                text: "8. ssh X11 forwarding",
+                collapsed: true,
                 items: [],
             },
 
             {
-                text: "ssh X11 forwarding",
-                items: [],
-            },
-
-            {
-                text: "Enabling index based file search",
+                text: "9. Enabling index based file search",
+                collapsed: true,
                 items: [],
             },
             {
-                text: "Using the tail -f command",
+                text: "10. Using the tail -f command",
+                collapsed: true,
                 items: [],
             },
             {
-                text: "Auto mounting a volume",
+                text: "11. Incrementally creating a base system",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "12. Automatic Nginx installation",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "13. Working on Cloud-init",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "14. Solving the ~/.ssh/known_hosts quirk",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "15. Auto mounting a volume",
+                collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_15/index.md"},
                     {text: "Terraform", link: "/exercise/exercise_15/terraform.md"},
                 ],
+            },
+            {
+                text: "16. Mount point's name specification",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "17. A module for ssh host key handling",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "18. Enhancing your web server.",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "19. Creating DNS records",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "20. Creating a host with corresponding DNS entries",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "21. Creating a fixed number of servers",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "22. Creating a web certificate",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "23. Testing your web certificate",
+                collapsed: true,
+                items: [],
+            },
+            {
+                text: "24. Combining certificate generation and server creation",
+                collapsed: true,
+                items: [],
             },
         ],
 
