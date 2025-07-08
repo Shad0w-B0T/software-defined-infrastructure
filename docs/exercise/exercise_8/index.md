@@ -8,7 +8,7 @@ even when only port 22 (SSH) is open.
 - Create a server as shown in:
   [Improve your server's security](/exercise/exercise_3/#improve-your-server-s-security)
 - Install NGINX:
-  [Install NGINX](exercise/exercise_3/nginx.html#_1-install-and-run-a-web-server)
+  [Install NGINX](/exercise/exercise_3/nginx.html#_1-install-and-run-a-web-server)
 - Configure the firewall to allow only ICMP and port 22 (SSH). → This means NGINX will no longer be accessible
   externally.
 
