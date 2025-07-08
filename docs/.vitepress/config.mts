@@ -56,6 +56,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                     {text: "Description", link: "/exercise/exercise_3/index.md"},
+                    {text: "Setup Nginx", link: "/exercise/exercise_3/nginx.md"},
                     {text: "Create SSH Key", link: "/exercise/exercise_3/ssh.md"},
                 ],
             },
