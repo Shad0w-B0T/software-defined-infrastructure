@@ -123,7 +123,9 @@ export default defineConfig({
             {
                 text: "12. Automatic Nginx installation",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Setup", link: "/exercise/exercise_12/setup.md"},
+                ],
             },
             {
                 text: "13. Working on Cloud-init",
