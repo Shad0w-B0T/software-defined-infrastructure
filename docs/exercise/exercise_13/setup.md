@@ -92,7 +92,7 @@ Connection to 91.99.69.219 closed.
 
 You can connect using the `devops` user and the configured SSH key:
 
-```shell
+```bash
 C:\Users\Daniel>ssh devops@91.99.69.219
 Linux nginx-server 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
 
