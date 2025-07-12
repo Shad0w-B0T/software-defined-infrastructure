@@ -115,7 +115,10 @@ export default defineConfig({
             {
                 text: "11. Incrementally creating a base system",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Description", link: "/exercise/exercise_11/index.md"},
+                    {text: "Setup", link: "/exercise/exercise_11/setup.md"},
+                ],
             },
             {
                 text: "12. Automatic Nginx installation",
