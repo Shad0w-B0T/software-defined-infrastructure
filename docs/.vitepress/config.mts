@@ -130,7 +130,9 @@ export default defineConfig({
             {
                 text: "13. Working on Cloud-init",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Setup", link: "/exercise/exercise_13/setup.md"},
+                ],
             },
             {
                 text: "14. Solving the ~/.ssh/known_hosts quirk",
