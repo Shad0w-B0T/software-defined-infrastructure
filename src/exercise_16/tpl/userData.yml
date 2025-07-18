@@ -1,0 +1,6 @@
+#cloud-config
+runcmd:
+  - mkdir /${volumename}
+  - echo "${device} /${volumename} xfs rw,defaults 0 2" >> /etc/fstab
+  - systemctl daemon-reload
+  - mount -a

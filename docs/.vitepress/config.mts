@@ -150,7 +150,7 @@ export default defineConfig({
             {
                 text: "16. Mount point's name specification",
                 collapsed: true,
-                items: [],
+                items: [{text: "Description", link: "/exercise/exercise_16/index.md"}],
             },
             {
                 text: "17. A module for ssh host key handling",
