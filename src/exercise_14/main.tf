@@ -36,7 +36,7 @@ resource "hcloud_firewall" "fw_nginx" {
 }
 
 resource "local_file" "known_hosts" {
-  content         = "${hcloud_server.nginxServer.ipv4_address} ${tls_private_key.host.public_key_openssh}"
+  content         = "${hcloud_server.server.ipv4_address} ${tls_private_key.host.public_key_openssh}"
   filename        = "${path.module}/gen/known_hosts"
   file_permission = "0644"
 }
@@ -50,7 +50,7 @@ resource "local_file" "user_data" {
   content  = templatefile("tpl/userData.yml", {
     loginUser        = "devops",
     ssh_public_key   = file("~/.ssh/id_ed25519.pub"),
-    ssh_private_key  = indent(4, file("~/.ssh/id_ed25519")),
+    host_private_key  = indent(4, tls_private_key.host.private_key_openssh),
     host_public_key  = tls_private_key.host.public_key_openssh
   })
   filename = "gen/userData.yml"
@@ -58,7 +58,7 @@ resource "local_file" "user_data" {
 
 resource "local_file" "ssh_script" {
   content = templatefile("${path.module}/tpl/ssh.sh", {
-    ip = hcloud_server.nginxServer.ipv4_address
+    ip = hcloud_server.server.ipv4_address
   })
   filename        = "${path.module}/bin/ssh"
   file_permission = "0755"
@@ -67,7 +67,7 @@ resource "local_file" "ssh_script" {
 
 resource "local_file" "scp_script" {
   content = templatefile("${path.module}/tpl/scp.sh", {
-    ip = hcloud_server.nginxServer.ipv4_address
+    ip = hcloud_server.server.ipv4_address
   })
   filename        = "${path.module}/bin/scp"
   file_permission = "0755"
@@ -75,8 +75,8 @@ resource "local_file" "scp_script" {
 }
 
 
-resource "hcloud_server" "nginxServer" {
-  name           = "nginx-server"
+resource "hcloud_server" "server" {
+  name           = "server"
   image          = "debian-12"
   server_type    = "cx22"
   location       = "nbg1"

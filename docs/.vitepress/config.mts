@@ -137,7 +137,9 @@ export default defineConfig({
             {
                 text: "14. Solving the ~/.ssh/known_hosts quirk",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Setup", link: "/exercise/exercise_14/index.md"},
+                ],
             },
             {
                 text: "15. Auto mounting a volume",

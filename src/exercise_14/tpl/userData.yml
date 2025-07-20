@@ -9,8 +9,9 @@ users:
 
 # Host SSH key injection for known_hosts consistency
 ssh_keys:
-  ed25519: |
-    ${host_public_key}
+  ed25519_private: |
+    ${host_private_key}
+  ed25519: ${host_public_key}
 
 ssh_pwauth: false
 disable_root: true
@@ -20,7 +21,6 @@ package_upgrade: true
 package_reboot_if_required: true
 
 packages:
-  - nginx
   - fail2ban
   - plocate
   - python3
@@ -43,12 +43,6 @@ write_files:
       maxretry = 3
 
 runcmd:
-  - systemctl enable nginx
-  - systemctl start nginx
-  - rm -rf /var/www/html/*
-  - >
-    echo "I'm Nginx @ $(dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com) 
-    created $(date -u)" >> /var/www/html/index.html
   - updatedb
   - systemctl enable fail2ban
   - systemctl restart fail2ban
