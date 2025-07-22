@@ -169,7 +169,11 @@ export default defineConfig({
             {
                 text: "18. Enhancing your web server.",
                 collapsed: true,
-                items: [],
+                items: [
+                    {text: "Description", link: "/exercise/exercise_18/index.md"},
+                    {text: "Staging mode", link: "/exercise/exercise_18/staging.md"},
+                    {text: "Production mode", link: "/exercise/exercise_18/production.md"}
+                ],
             },
             {
                 text: "19. Creating DNS records",
