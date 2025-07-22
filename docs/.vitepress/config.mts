@@ -15,6 +15,13 @@ export default defineConfig({
 
         sidebar: [
             {
+                text: "Modules",
+                collapsed: true,
+                items: [
+                    {text: "SSH known hosts", link: "/modules/known_hosts.md"},
+                ],
+            },
+            {
                 text: "0. Tools",
                 collapsed: true,
                 items: [
@@ -157,7 +164,7 @@ export default defineConfig({
             {
                 text: "17. A module for ssh host key handling",
                 collapsed: true,
-                items: [],
+                items: [{text: "Description", link: "/exercise/exercise_17/index.md"}],
             },
             {
                 text: "18. Enhancing your web server.",

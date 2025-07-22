@@ -1,3 +1,0 @@
-dig +noall +answer @ns1.hdm-stuttgart.cloud www.g3.sdi.hdm-stuttgart.cloud
-
-Resolve-DnsName -Name www.g3.sdi.hdm-stuttgart.cloud -Server ns1.hdm-stuttgart.cloud
