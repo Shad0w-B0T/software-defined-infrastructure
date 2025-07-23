@@ -21,8 +21,8 @@ you can reuse the same token and SSH configuration.
 
 Refer to:
 
-- [Prerequisites](/exercise/exercise_11/setup.html#%F0%9F%9B%A0%EF%B8%8F-2-prerequisites)
-- [Hetzner api token](/exercise/exercise_11/setup.html#%F0%9F%94%90-3-secure-your-hetzner-api-token)
+- [Prerequisites](../../exercise_11/step-by-step/setup.md#prerequisites)
+- [Hetzner api token](../../exercise_11/step-by-step/setup.md#secure-your-hetzner-api-token)
 
 ## Create Cloud Init Script (`nginx-init.sh`)
 
@@ -45,7 +45,7 @@ resource "hcloud_server" "nginxServer" {
 The deployment process is identical to the earlier example. Follow the same instructions to initialize and apply the 
 Terraform configuration.
 
-Reference: [Initialize and Deploy](/exercise/exercise_11/setup.html#%F0%9F%9A%80-4-initialize-and-deploy)
+Reference: [Initialize and Deploy](../../exercise_11/step-by-step/setup.md#initialize-and-deploy)
 
 Example output:
 

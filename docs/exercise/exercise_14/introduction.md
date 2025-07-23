@@ -16,9 +16,9 @@ This typically happens when a newly created server reuses the same IP address as
 new SSH host key. Your local `~/.ssh/known_hosts` still remembers the old fingerprint, causing a mismatch.
 
 As reference, see:
-- [What does this message mean?](/exercise/exercise_2/recreate.html#what-does-this-message-mean)
-- [How to fix it?](/exercise/exercise_2/recreate.html#how-to-fix-it)
-- [Alternative Fix: Use a Separate known_hosts File](/exercise/exercise_2/recreate.html#alternative-fix-use-a-separate-known-hosts-file)
+- [What does this message mean?](../exercise_2/step-by-step/recreate.md#what-does-this-message-mean)
+- [How to fix it?](../exercise_2/step-by-step/recreate.md#how-to-fix-it)
+- [Alternative Fix: Use a Separate known_hosts File](../exercise_2/step-by-step/recreate.md#alternative-fix-use-a-separate-known_hosts-file)
 
 ## Project Structure
 

@@ -8,9 +8,9 @@ forward remote port 80 to local port 2000 using SSH.
 ## Prepare the Server
 
 - Create a server as shown in:
-[Improve your server's security](/exercise/exercise_3/#improve-your-server-s-security)
+[Improve your server's security](../exercise_3/introduction.md#improve-your-servers-security)
 - Install NGINX:
-[Install NGINX](/exercise/exercise_3/nginx.html#_1-install-and-run-a-web-server)
+[Install NGINX](../exercise_3/step-by-step/nginx.md#install-and-run-a-web-server)
 - Configure the firewall to allow only ICMP and port 22 (SSH). → This means NGINX will no longer be accessible externally.
 
 ## Set up Local Port Forwarding
@@ -44,5 +44,10 @@ Now, you can access the remote NGINX server by visiting:
 
 Although the firewall blocks direct HTTP access, the traffic is securely forwarded through the SSH tunnel.
 
-<ImageWithCaption src="/images/exercise_7/port.png" alt="SSH Port Forwarding: Port 80 → 2000" :caption="'Remote port 80 is forwarded through SSH to local port 2000'" :number="1" />
+<ImageWithCaption 
+    src="/images/exercise_7/port.png" 
+    alt="SSH Port Forwarding: Port 80 → 2000" 
+    :caption="'Remote port 80 is forwarded through SSH to local port 2000'" 
+    :number="1" 
+/>
 
