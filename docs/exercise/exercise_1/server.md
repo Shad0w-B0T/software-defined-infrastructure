@@ -7,7 +7,7 @@ From choosing a region to assigning a firewall, each step ensures that your serv
 <ImageWithCaption
   src="/images/exercise_1/server_1.png"
   alt="Server UI"
-  :caption="'Server-Erstellung im Hetzner-Panel'"
+  :caption="'Server-Creation via the Hetzner-Panel.'"
   :number="1"
 />
 

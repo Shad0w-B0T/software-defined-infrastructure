@@ -45,10 +45,10 @@ This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 ```
 
-What does this message mean?
+#### What does this message mean?
 
 This is a standard SSH security prompt.
-It appears when your local machine has never connected to this IP address before and therefore does not have the host’s
+It appears when your local machine has never connected to this IP address before and therefore does not have the host's
 key stored in the ~/.ssh/known_hosts file.
 
 - "Can't be established": Your system cannot verify the identity of the server automatically.
@@ -58,7 +58,7 @@ You can manually verify it if the key was provided in advance.
 (to prevent man-in-the-middle attacks).
 
 If you trust the source (e.g., you just created the server), type yes.
-The key will be saved locally, and the warning won’t appear next time.
+The key will be saved locally, and the warning will not appear next time.
 
 ### Enter the Root Password
 
@@ -79,9 +79,9 @@ root@debian-4gb-fsn1-2:~#
 
 ## Connecting via the Console
 
-If you need direct access to your server’s terminal, you can use the Hetzner Cloud Console feature.
+If you need direct access to your server's terminal, you can use the Hetzner Cloud Console feature.
 
-1. Open your server’s detail page in the Hetzner Cloud Console.
+1. Open your server's detail page in the Hetzner Cloud Console.
 2. Locate the **Console** tab or button as shown below:
 
 <ImageWithCaption

@@ -1,6 +1,6 @@
 # Create Firewall
 
-Before launching a server, it’s essential to define a **firewall** to protect it from unwanted access.
+Before launching a server, it is essential to define a **firewall** to protect it from unwanted access.
 A firewall controls which traffic is allowed to reach your server. We'll now configure one in the Hetzner web interface.
 
 ## 1. Open the Firewall Tab
@@ -38,7 +38,7 @@ These are essential for server management.
 
 ## 3. Name Your Firewall
 
-Choose a descriptive name like basic-firewall so you can reuse it easily for other servers.
+Choose a descriptive name like *basic-firewall* so you can reuse it easily for other servers.
 
 <ImageWithCaption
   src="/images/exercise_1/firewall_3.png"
@@ -47,11 +47,11 @@ Choose a descriptive name like basic-firewall so you can reuse it easily for oth
   :number="3"
 />
 
-You can either accept the default name or set it to something meaningful, like basicFirewall, to easily identify it later.
+You can either accept the default name or set it to something meaningful, like *basic-firewall*, to easily identify it later.
 
 ## 4. Done
 
-Once you’re done configuring, click Create.
+Once you are done configuring, click Create.
 
 <ImageWithCaption
   src="/images/exercise_1/firewall_4.png"
@@ -60,7 +60,7 @@ Once you’re done configuring, click Create.
   :number="4"
 />
 
-You ’ve now created a reusable firewall configuration that can be assigned to any cloud server you launch.
+You have now created a reusable firewall configuration that can be assigned to any cloud server you launch.
 This improves both security and consistency in your infrastructure setup.
 
-In the next step, you’ll launch the actual cloud server using this firewall.
+In the next step, you will launch the actual cloud server using this firewall.
