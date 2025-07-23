@@ -8,14 +8,11 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: brand
-      text: Exercise 1
-      link: /exercise/exercise_1
+      text: To the documentation
+      link: /exercise/exercise_1/introduction.html
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Lecture Content
+      link: https://freedocs.mi.hdm-stuttgart.de/sdi.html
 
 features:
   - title: Feature A
