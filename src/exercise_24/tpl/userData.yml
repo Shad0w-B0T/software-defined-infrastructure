@@ -1,0 +1,93 @@
+#cloud-config
+users:
+  - name: ${loginUser}
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ${ssh_public_key}
+    groups: [sudo, systemd-journal]
+
+# Host SSH key injection for known_hosts consistency
+ssh_keys:
+  ed25519_private: |
+    ${host_private_key}
+  ed25519: ${host_public_key}
+
+ssh_pwauth: false
+disable_root: true
+
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true
+
+packages:
+  - fail2ban
+  - plocate
+  - python3
+  - python3-systemd
+  - nginx
+
+write_files:
+  - path: /etc/fail2ban/jail.local
+    content: |
+      [DEFAULT]
+      allowipv6 = auto
+      bantime = 10m
+      findtime = 10m
+      maxretry = 5
+      backend = systemd
+
+      [sshd]
+      enabled = true
+      port = ssh
+      filter = sshd
+      maxretry = 3
+
+  - path: /var/www/html/index.html
+    content: |
+      <html>
+        <head><title>Hello</title></head>
+        <body><h1>Hello World from Terraform!</h1></body>
+      </html>
+
+  - path: /etc/ssl/certs/certificate.pem
+    content: |
+      ${certificate_pem}
+
+  - path: /etc/ssl/private/private.pem
+    permissions: '0600'
+    content: |
+      ${private_key_pem}
+
+  - path: /etc/nginx/sites-available/default
+    content: |
+      server {
+          listen 80 default_server;
+          listen [::]:80 default_server;
+          return 301 https://$host$request_uri;
+      }
+
+      server {
+          listen 443 ssl default_server;
+          listen [::]:443 ssl default_server;
+          server_name ${server_name}.${dns_zone} *.${dns_zone};
+
+          ssl_certificate /etc/ssl/certs/certificate.pem;
+          ssl_certificate_key /etc/ssl/private/private.pem;
+
+          root /var/www/html;
+          index index.html;
+
+          location / {
+              try_files $uri $uri/ =404;
+          }
+      }
+
+runcmd:
+  - updatedb
+  - systemctl enable fail2ban
+  - systemctl restart fail2ban
+  - sed -i 's/^#*PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+  - sed -i 's/^#*PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+  - systemctl restart sshd
+  - nginx -t && systemctl enable nginx && systemctl restart nginx
