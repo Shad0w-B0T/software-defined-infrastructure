@@ -11,7 +11,7 @@ From choosing a region to assigning a firewall, each step ensures that your serv
   :number="1"
 />
 
-## 1. Choose a Location
+## Choose a Location
 
 Select a data center near your users or your own location for optimal latency.
 
@@ -22,7 +22,7 @@ Select a data center near your users or your own location for optimal latency.
   :number="2"
 />
 
-## 2. Select the Operating System
+## Select the Operating System
 
 Choose from various Linux distributions or images. Debian 12 is a solid choice for most use cases.
 
@@ -33,7 +33,7 @@ Choose from various Linux distributions or images. Debian 12 is a solid choice f
   :number="3"
 />
 
-## 3. Choose Server Type
+## Choose Server Type
 
 Pick a server type based on your workload — CX22 is great for testing and small apps.
 
@@ -44,7 +44,7 @@ Pick a server type based on your workload — CX22 is great for testing and smal
   :number="4"
 />
 
-## 4. Networking Options
+## Networking Options
 
 Set up networking features like private networks, public IPs, and floating IPs.
 
@@ -55,7 +55,7 @@ Set up networking features like private networks, public IPs, and floating IPs.
   :number="5"
 />
 
-## 5. Assign a Firewall
+## Assign a Firewall
 
 Attach a previously created firewall to protect your server.
 
@@ -66,7 +66,7 @@ Attach a previously created firewall to protect your server.
   :number="6"
 />
 
-## 6. Set a Server Name
+## Set a Server Name
 
 Give your server a meaningful name (e.g. `web-node-1`) for easier identification.
 

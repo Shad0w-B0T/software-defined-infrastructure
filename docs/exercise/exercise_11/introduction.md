@@ -1,4 +1,4 @@
-# 🛠️ Incrementally Creating a Base System with Terraform
+# ️ Incrementally Creating a Base System with Terraform
 
 This document describes how to set up a simple infrastructure in the Hetzner Cloud with Terraform - secure, traceable and versionable.
 
@@ -9,7 +9,7 @@ Goal:
 - Display Terraform output for IP address and data center
 - Enable project versioning via Git
 
-## 1. Minimal Configuration & SSH Firewall Rule
+## Minimal Configuration & SSH Firewall Rule
 
 We start with the basic configuration, supplemented by a firewall rule for port 22 (SSH):
 
@@ -47,7 +47,7 @@ resource "hcloud_server" "helloServer" {
 }
 ```
 
-## 2. create server & receive e-mail with access data
+## Create a server and receive e-mail with access data
 
 Now execute Terraform:
 
@@ -62,18 +62,18 @@ If **no SSH key** is specified, Hetzner automatically creates a root password on
 The e-mail contains:
 
 - IPv4 & IPv6 address
-- Root user name
+- Root username
 - Initial password
 
 This is a **fallback mechanism from Hetzner** if no key is available.
 For security reasons, you should then only work with SSH keys.
 
-## 3. Versioning the Project & Securing API Tokens
+## Versioning the Project & Securing API Tokens
 
 A common security risk is placing sensitive credentials—such as API tokens—directly in the code (e.g., inside `main.tf`). 
 To avoid this, you should externalize such secrets using `.tfvars` files or environment variables.
 
-### 🔐 Secure Token Handling via `.tfvars` File
+### Secure Token Handling via `.tfvars` File
 
 Terraform automatically loads any file ending in `.auto.tfvars.` For a secure workflow, follow these steps:
 
@@ -90,7 +90,7 @@ Example content:
 hcloud_token = "your_api_token_goes_here"
 ```
 
-## 🚫 Security Warning
+## Security Warning
 
 The `secrets.auto.tfvars` file must never be checked into version control!
 

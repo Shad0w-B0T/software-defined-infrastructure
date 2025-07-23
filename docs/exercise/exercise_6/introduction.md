@@ -17,13 +17,30 @@ B using SSH.
 
 Server 1 is created as shown below:
 
-<ImageWithCaption src="/images/exercise_6/private_network.png" alt="Server UI" :caption="'1. Create the first server with a private network enabled.'" :number="1" />
+<ImageWithCaption 
+    src="/images/exercise_6/private_network.png" 
+    alt="Server UI" 
+    :caption="'1. Create the first server with a private network enabled.'" 
+    :number="1" 
+/>
 
-<ImageWithCaption src="/images/exercise_6/private_network_modal.png" alt="Server UI" :caption="'2. Confirm private network creation in the server modal dialog.'" :number="2" />
+<br>
+
+<ImageWithCaption 
+    src="/images/exercise_6/private_network_modal.png" 
+    alt="Server UI" 
+    :caption="'2. Confirm private network creation in the server modal dialog.'" 
+    :number="2" 
+/>
 
 The second server is then created as follows:
 
-<ImageWithCaption src="/images/exercise_6/private_network_hop.png" alt="Server UI" :caption="'3. Create the second server and attach it to the same private network.'" :number="3" />
+<ImageWithCaption 
+    src="/images/exercise_6/private_network_hop.png" 
+    alt="Server UI" 
+    :caption="'3. Create the second server and attach it to the same private network.'" 
+    :number="3" 
+/>
 
 
 The servers are now configured as follows:

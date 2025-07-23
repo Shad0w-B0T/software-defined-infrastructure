@@ -6,7 +6,7 @@ visualise how firewall rules control traffic. Changes (e.g. opening or blocking 
 their effect on accessibility from both inside and outside the server can be understood. This method is ideal for 
 beginners looking to grasp basic network security concepts.
 
-## 1. Install and Run a Web Server
+## Install and Run a Web Server
 
 Install NGINX, a lightweight and fast web server:
 
@@ -27,7 +27,7 @@ Upgrading binary: nginx.
 Processing triggers for man-db (2.11.2-2) ...
 ```
 
-## 2. Test NGINX Locally From the Server
+## Test NGINX Locally From the Server
 
 Check if task is running on system:
 
@@ -80,14 +80,14 @@ Commercial support is available at
 
 This confirms that NGINX is running and responding on port 80.
 
-## 3. External Browser Access Fails — Why?
+## External Browser Access Fails — Why?
 
 Try accessing http://46.62.153.100, Won’t load in the browser
 
 **Why?**
 The firewall still blocks port 80, even though the server itself is working.
 
-## 4. Allow Port 80 in Firewall
+## Allow Port 80 in Firewall
 
 Add another inbound firewall rule:
 - Protocol: **TCP**

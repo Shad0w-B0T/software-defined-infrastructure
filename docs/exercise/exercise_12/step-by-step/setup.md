@@ -1,9 +1,9 @@
-# 🌐 Deploying an Nginx Web Server with Terraform on Hetzner Cloud
+# Deploying an Nginx Web Server with Terraform on Hetzner Cloud
 
 This guide explains how to automatically provision a Hetzner Cloud server using Terraform, 
 configure SSH key-based access, define firewall rules, and install the Nginx web server using a cloud-init shell script.
 
-## 📁 1. Project Structure
+## Project Structure
 
 ```shell
 project-root/
@@ -14,17 +14,17 @@ project-root/
 └── secrets.auto.tfvars.template # Token template (DO NOT COMMIT)
 ```
 
-## 🔐 2. Prepare Your Hetzner API Token
+## Prepare Your Hetzner API Token
 
 The prerequisites for this setup are identical to those used for creating a basic server. If you've already completed the earlier setup,
 you can reuse the same token and SSH configuration.
 
 Refer to:
 
-- 🔧 [Prerequisites](/exercise/exercise_11/setup.html#%F0%9F%9B%A0%EF%B8%8F-2-prerequisites)
-- 🔐 [Hetzner api token](/exercise/exercise_11/setup.html#%F0%9F%94%90-3-secure-your-hetzner-api-token)
+- [Prerequisites](/exercise/exercise_11/setup.html#%F0%9F%9B%A0%EF%B8%8F-2-prerequisites)
+- [Hetzner api token](/exercise/exercise_11/setup.html#%F0%9F%94%90-3-secure-your-hetzner-api-token)
 
-## 📜 3. Create Cloud Init Script (`nginx-init.sh`)
+## Create Cloud Init Script (`nginx-init.sh`)
 
 The Nginx web server is installed automatically via a shell script that runs when the server is created. This script is 
 injected using the `user_data` parameter of the Hetzner Cloud server resource:
@@ -40,12 +40,12 @@ resource "hcloud_server" "nginxServer" {
 }
 ```
 
-## 🚀 4. Initialize and Deploy
+## Initialize and Deploy
 
 The deployment process is identical to the earlier example. Follow the same instructions to initialize and apply the 
 Terraform configuration.
 
-Reference: [🚀 Initialize and Deploy](/exercise/exercise_11/setup.html#%F0%9F%9A%80-4-initialize-and-deploy)
+Reference: [Initialize and Deploy](/exercise/exercise_11/setup.html#%F0%9F%9A%80-4-initialize-and-deploy)
 
 Example output:
 
@@ -58,16 +58,21 @@ datacenter = "nbg1-dc3"
 ip_addr = "91.99.69.219"
 ```
 
-## 🌐 5. Access the Nginx Server in a Browser
+## Access the Nginx Server in a Browser
 
 Once provisioning is complete, open the public IP address in your browser to verify that Nginx is 
 running and serving the default page.
 
 > 91.99.69.219
 
-<ImageWithCaption src="/images/exercise_12/nginx_webserver.png" alt="Nginx Welcome Page" :caption="'Hello World index.html served by Nginx'" :number="1" />
+<ImageWithCaption 
+    src="/images/exercise_12/nginx_webserver.png" 
+    alt="Nginx Welcome Page" 
+    :caption="'Hello World index.html served by Nginx'"
+    :number="1" 
+/>
 
-## 🔍 6. Verify Nginx Service Status (Optional via SSH)
+## Verify Nginx Service Status (Optional via SSH)
 
 To manually verify that Nginx is active on the server, connect via SSH:
 

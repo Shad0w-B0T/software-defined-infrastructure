@@ -5,7 +5,7 @@ A remote server can only be accessed via SSH (port 22); all other incoming traff
 However, we still need to access the web server running on that host via a browser. To do this, we will 
 forward remote port 80 to local port 2000 using SSH.
 
-## 1. Prepare the Server
+## Prepare the Server
 
 - Create a server as shown in:
 [Improve your server's security](/exercise/exercise_3/#improve-your-server-s-security)
@@ -13,7 +13,7 @@ forward remote port 80 to local port 2000 using SSH.
 [Install NGINX](/exercise/exercise_3/nginx.html#_1-install-and-run-a-web-server)
 - Configure the firewall to allow only ICMP and port 22 (SSH). → This means NGINX will no longer be accessible externally.
 
-## 2. Set Up Local Port Forwarding
+## Set up Local Port Forwarding
 
 To access NGINX despite the firewall, use SSH port forwarding:
 
@@ -36,7 +36,7 @@ This command:
 - Opens an SSH connection to the remote host.
 - Forwards local port **2000** to port **80** on the remote host via the SSH tunnel.
 
-### 3. Access NGINX via Localhost
+### Access NGINX via localhost
 
 Now, you can access the remote NGINX server by visiting: 
 

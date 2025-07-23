@@ -7,7 +7,7 @@ manually and configuring it to mount automatically on system boot using the `/et
 
 tf description
 
-## 1. Check Mounted Volumes
+## Check Mounted Volumes
 
 Run the following to see the current state of your disks:
 
@@ -33,7 +33,7 @@ If `/dev/sdb` is already mounted (e.g., `/mnt/HC_Volume_*`), unmount it:
 sudo umount /mnt/HC_Volume_*
 ```
 
-## 2. Partition the Disk
+## Partition the Disk
 
 The volume of Hetzner has 10GiB. The partitions are divided 50/50. So each partition gets 5GiB.
 
@@ -112,7 +112,7 @@ Then reboot:
 sudo reboot
 ```
 
-## 3. Create Filesystems
+## Create Filesystems
 
 Format the two partitions:
 
@@ -121,7 +121,7 @@ sudo mkfs.ext4 /dev/sdb1
 sudo mkfs.xfs /dev/sdb2
 ```
 
-## 4. Mount the Partitions Manually
+## Mount the Partitions Manually
 
 Create mount points:
 
@@ -152,7 +152,7 @@ Example:
 sudo mount UUID=dfe82aba-61a9-4b2d-b1a1-da009f3747ab /disk2
 ```
 
-## 5. Test Mounting
+## Test Mounting
 
 Write a test file:
 
@@ -161,7 +161,7 @@ echo "Hello Disk1" | sudo tee /disk1/test.txt
 ls /disk1/test.txt
 ```
 
-## 6. Configure Auto-Mount in fstab
+## Configure Auto-Mount in fstab
 
 To ensure that your new partitions are automatically mounted at boot, you'll need to configure the `/etc/fstab` file.
 
@@ -234,7 +234,7 @@ sudo mount -a
 
 If no errors appear, your new disks are successfully configured to auto-mount at every boot.
 
-## 7. Verify on Reboot
+## Verify on Reboot
 
 Once your `/etc/fstab` is properly configured, it’s important to test whether everything mounts correctly after a reboot. 
 This ensures your system will behave as expected in the future—especially after reboots or crashes.

@@ -4,7 +4,7 @@ This guide will demonstrate how to install and use the `plocate` tool to perform
 Linux system. The process involves installing the tool, indexing the file system, performing searches and observing the 
 effect of file changes on search results.
 
-## 1. Install plocate
+## Install plocate
 
 Begin by installing the plocate package:
 
@@ -12,7 +12,7 @@ Begin by installing the plocate package:
 sudo apt install plocate
 ```
 
-## 2. Create the initial index
+## Create the initial index
 
 Run the `updatedb` command to generate the initial file index:
 
@@ -22,7 +22,7 @@ sudo updatedb
 
 This step creates the database that `locate` uses to find files.
 
-## 3. Search for files containing "aptitude"
+## Search for files containing "aptitude"
 
 Use the `locate` command to search for file paths that include the string `aptitude`:
 
@@ -37,7 +37,7 @@ root@debian-2gb-hel1-1:~# locate aptitude
 
 This shows that `locate` can quickly find all paths matching the search term from the index.
 
-## 4. Create a new test file
+## Create a new test file
 
 Now, create a new file that does not yet exist in the index:
 
@@ -45,7 +45,7 @@ Now, create a new file that does not yet exist in the index:
 touch ~/mylocaltest.txt
 ```
 
-## 5. Try searching before re-indexing
+## Try searching before re-indexing
 ```shell
 root@debian-2gb-hel1-1:~# locate localtest
 root@debian-2gb-hel1-1:~# 
@@ -53,14 +53,14 @@ root@debian-2gb-hel1-1:~#
 
 Nothing is found because the file was created after the last index update.
 
-## 6. Rebuild the index after create
+## Rebuild the index after create
 
 Now update the file index again:
 ```shell
 sudo updatedb
 ```
 
-## 7. Search again
+## Search again
 
 ```shell
 root@debian-2gb-hel1-1:~# locate localtest
@@ -69,7 +69,7 @@ root@debian-2gb-hel1-1:~# locate localtest
 
 The file is now found because it has been included in the latest index.
 
-## 8. Delete the file and search again
+## Delete the file and search again
 
 Remove the file:
 ```shell
@@ -79,7 +79,7 @@ root@debian-2gb-hel1-1:~# locate localtest
 ```
 The file still appears in search results because the index has not been updated yet.
 
-## 9. Rebuild the index and confirm deletion
+## Rebuild the index and confirm deletion
 ````shell
 root@debian-2gb-hel1-1:~# sudo updatedb
 ````

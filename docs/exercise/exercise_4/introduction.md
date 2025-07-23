@@ -1,4 +1,4 @@
-# 🔐 SSH Agent Setup Guide
+# SSH Agent Setup Guide
 
 This guide explains how to install and use the ssh-agent program to simplify SSH access by loading your private key into 
 memory for the duration of a session. Once unlocked, you won't need to reenter your passphrase for subsequent connections.
@@ -12,7 +12,7 @@ behalf. It is especially useful when using passphrase-protected SSH keys.
 
 ## Step-by-step Instructions
 
-### 1. **Install ssh-agent**
+### **Install ssh-agent**
 
 Most modern systems have `ssh-agent` pre-installed. If not, install it using your package manager.
 
@@ -22,27 +22,27 @@ sudo apt update
 sudo apt install openssh-client
 ```
 
-### 2. Start the ssh-agent
+### Start the ssh-agent
 
 ```bash
 eval "$(ssh-agent -s)"
 ```
 This will start the agent and export environment variables so your shell can talk to it.
 
-### 3. Add your SSH key to the agent
+### Add your SSH key to the agent
 
 ```bash
 ssh-add ~/.ssh/id_ed25519
 ```
 Replace with your actual key file if different. You'll be prompted for your passphrase once.
 
-### 4. Verify loaded keys
+### Verify loaded keys
 
 ```bash
 ssh-add -l
 ```
 
-### 5. Use it!
+### Use it!
 You can now SSH into multiple servers without being prompted for your key's passphrase again during the session.
 
 ```bash

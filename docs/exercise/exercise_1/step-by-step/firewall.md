@@ -3,7 +3,7 @@
 Before launching a server, it is essential to define a **firewall** to protect it from unwanted access.
 A firewall controls which traffic is allowed to reach your server. We'll now configure one in the Hetzner web interface.
 
-## 1. Open the Firewall Tab
+## Open the Firewall Tab
 
 ☰ Networking → Firewalls → Create Firewall
 
@@ -16,7 +16,7 @@ Select Firewalls → Create Firewall.
   :number="1"
 />
 
-## 2. Create a New Firewall
+## Create a New Firewall
 
 Click on Create Firewall and adjust the settings to your needs.
 
@@ -36,7 +36,7 @@ Keep the two default inbound rules:
 These are essential for server management.
 :::
 
-## 3. Name Your Firewall
+## Name Your Firewall
 
 Choose a descriptive name like *basic-firewall* so you can reuse it easily for other servers.
 
@@ -49,7 +49,7 @@ Choose a descriptive name like *basic-firewall* so you can reuse it easily for o
 
 You can either accept the default name or set it to something meaningful, like *basic-firewall*, to easily identify it later.
 
-## 4. Done
+## Done
 
 Once you are done configuring, click Create.
 

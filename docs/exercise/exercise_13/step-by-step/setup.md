@@ -1,4 +1,4 @@
-# 🛡️ Deploying a Secure Nginx Web Server with Fail2Ban on Hetzner Cloud using Terraform
+# Deploying a Secure Nginx Web Server with Fail2Ban on Hetzner Cloud using Terraform
 
 This guide describes how to automatically provision a Hetzner Cloud server using Terraform, install an Nginx web server,
 and secure it with Fail2Ban using a cloud-init shell script.
@@ -8,14 +8,14 @@ and secure it with Fail2Ban using a cloud-init shell script.
 As soon as a server with a public IP address comes online — especially with open standard ports like SSH (port 22) or HTTP 
 (port 80) — it is typically discovered within minutes by automated bots and scanners from around the world. These actors attempt to gain access through various techniques, most commonly:
 
-- 🧠 **Brute-force attacks** on SSH, often using common usernames like root, admin, or guessing weak passwords. 
+- **Brute-force attacks** on SSH, often using common usernames like root, admin, or guessing weak passwords. 
 [Fail2Ban – Why Brute-Force Attacks Are Common](https://www.fail2ban.org/wiki/index.php/Main_Page)
-- 🔍 Botnets, composed of compromised devices, that sweep IP address ranges in search of open and insecure servers.
+- Botnets, composed of compromised devices, that sweep IP address ranges in search of open and insecure servers.
 
 Even if your server is freshly deployed and not publicly advertised, it's common to see failed login attempts in system 
 logs **within the first few minutes**. This is why deploying protections like **Fail2Ban** is essential — it helps detect and automatically block suspicious activity early before a breach can occur.
 
-## 📁 1. Project Structure
+## Project Structure
 
 ```shell
 project-root/
@@ -27,17 +27,17 @@ project-root/
 └── secrets.auto.tfvars.template  # API token template (DO NOT COMMIT)
 ```
 
-## 🔐 2. Prepare Your Hetzner API Token
+## Prepare Your Hetzner API Token
 
 The prerequisites for this setup are identical to those used for creating a basic server. If you've already completed the earlier setup,
 you can reuse the same token and SSH configuration.
 
 Refer to:
 
-- 🔧 [Prerequisites](/exercise/exercise_11/setup.html#%F0%9F%9B%A0%EF%B8%8F-2-prerequisites)
-- 🔐 [Hetzner api token](/exercise/exercise_11/setup.html#%F0%9F%94%90-3-secure-your-hetzner-api-token)
+- [Prerequisites](/exercise/exercise_11/setup.html#%F0%9F%9B%A0%EF%B8%8F-2-prerequisites)
+- [Hetzner api token](/exercise/exercise_11/setup.html#%F0%9F%94%90-3-secure-your-hetzner-api-token)
 
-## 📜 3. Create Cloud-Init `userData.yml`
+## Create Cloud-Init `userData.yml`
 
 bei der in der tpl befindenten datei handelt es sich um ein template das gebaut wird und dann die richtige file
 im /gen ordern ablegt.
@@ -47,12 +47,12 @@ benötigt. was leider nicht standardmäßig installirt wird.
 
 es es nicht vorhanden fail der start von fail2ban mit dem error code 255.
 
-## 🚀 4. Initialize and Deploy
+## Initialize and Deploy
 
 The deployment process is identical to the earlier example. Follow the same instructions to initialize and apply the
 Terraform configuration.
 
-Reference: [🚀 Initialize and Deploy](/exercise/exercise_11/setup.html#%F0%9F%9A%80-4-initialize-and-deploy)
+Reference: [Initialize and Deploy](/exercise/exercise_11/setup.html#%F0%9F%9A%80-4-initialize-and-deploy)
 
 Example output:
 
@@ -65,19 +65,24 @@ datacenter = "nbg1-dc3"
 ip_addr = "91.99.69.219"
 ```
 
-## 🌐 5. Access Nginx in Your Browser
+## Access Nginx in Your Browser
 
 Once provisioning is complete, open the server’s public IP in a browser to see the default Nginx welcome page:
 
 > 91.99.69.219
 
-<ImageWithCaption src="/images/exercise_13/nginx_webserver.png" alt="" :caption="''" :number="1" />
+<ImageWithCaption 
+    src="/images/exercise_13/nginx_webserver.png" 
+    alt="Nginx welcome page" 
+    :caption="'Nginx welcome page'" 
+    :number="1"
+/>
 
-## 6. Verify Services via SSH (Optional)
+## Verify Services via SSH (Optional)
 
 To verify that the services are running correctly, you can SSH into the server.
 
-### 🚫 Root Login Is Disabled
+### Root Login Is Disabled
 
 For security reasons, the root user login has been disabled. Attempting to connect as root will result in the following message:
 
@@ -88,7 +93,7 @@ Please login as the user "NONE" rather than the user "root".
 Connection to 91.99.69.219 closed.
 ```
 
-### ✅ Use the devops User Instead
+### Use the devops User Instead
 
 You can connect using the `devops` user and the configured SSH key:
 
@@ -106,7 +111,7 @@ Last login: Sat Jul 12 15:20:16 2025 from 91.8.102.39
 devops@nginx-server:~$
 ```
 
-### 🔍 Check Nginx Status
+### Check Nginx Status
 
 Run the following command:
 
@@ -122,7 +127,7 @@ systemctl status nginx
      Active: active (running) since Sat 2025-07-12 15:20:22 UTC; ...
 ```
 
-### 🔒 Check Fail2Ban Status
+### Check Fail2Ban Status
 
 To verify that Fail2Ban is running and protecting the server:
 

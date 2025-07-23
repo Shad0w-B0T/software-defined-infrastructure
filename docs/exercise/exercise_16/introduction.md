@@ -7,7 +7,7 @@ This guide documents how to:
 - Use Cloud-init to configure and mount the volume automatically on first boot
 - Verify the correct configuration
 
-## 1. Terraform Resources Overview
+## Terraform Resources Overview
 
 - `hcloud_volume`: defines a 10 GB `xfs` volume (unattached)
 - `hcloud_server`: creates the instance with `cloud-init`
@@ -19,7 +19,7 @@ For example: `location = "nbg1"` in both `hcloud_server` and `hcloud_volume`.
 :::
 
 
-## 2. Verification Steps
+## Verification Steps
 
 After applying Terraform and booting the server:
 

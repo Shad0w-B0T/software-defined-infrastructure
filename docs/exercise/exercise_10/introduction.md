@@ -16,7 +16,7 @@ sudo systemctl enable --now rsyslog
 
 This ensures that authentication logs are written to `/var/log/auth.log`.
 
-## 1. Monitor the Authentication Log
+## Monitor the Authentication Log
 
 Log in to your VM and run the following command:
 
@@ -26,13 +26,13 @@ sudo tail -f /var/log/auth.log
 
 This command will continuously display the latest log entries as they occur.
 
-## 2. Simulate a Login Event
+## Simulate a Login Event
 
 ```shell
 ssh root@46.62.153.102
 ```
 
-## 3. Output
+## Output
 
 ```shell
 root@debian-2gb-hel1-1:/var/log# tail -f /var/log/auth.log 

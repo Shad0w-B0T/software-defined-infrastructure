@@ -1,6 +1,6 @@
 # DNS & SSH Known Hosts Automation for Multiple Servers with Terraform
 
-## 📡 DNS Configuration
+## DNS Configuration
 
 The DNS setup uses the [HashiCorp DNS Provider](https://registry.terraform.io/providers/hashicorp/dns/latest) 
 to manage `A` records for each server.

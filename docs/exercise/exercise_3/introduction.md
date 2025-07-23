@@ -8,7 +8,7 @@ You will learn how to:
 - set up and test a basic web server (NGINX)
 - understand the implications of firewalls for HTTP/SSH access
 
-## 1. Create a Secure Server with Minimal Access
+## Create a Secure Server with Minimal Access
 
 [Firewall Section](/exercise/exercise_1/firewall.html#_2-create-a-new-firewall)
 
@@ -19,7 +19,7 @@ You will learn how to:
     :number="1" 
 />
 
-## 2. Verify Ping (ICMP) Connectivity
+## Verify Ping (ICMP) Connectivity
 
 Test if the server responds to ping from your local terminal:
 
@@ -38,7 +38,7 @@ rtt min/avg/max/mdev = 41.180/41.867/43.232/0.808 ms
 
 An answer shows that icmp is allowed.
 
-## 3. SSH Fails (As Expected)
+## SSH Fails (As Expected)
 
 Attempt to SSH into the server:
 
@@ -49,7 +49,7 @@ ssh: connect to host 46.62.153.100 port 22: Connection refused
 
 This is expected because port 22 is not yet open in the firewall.
 
-## 4. Enable SSH Access (Port 22)
+## Enable SSH Access (Port 22)
 
 Add a new inbound rule to the [firewall](/exercise/exercise_1/firewall.html#_2-create-a-new-firewall):
 - Protocol: **TCP**
@@ -74,7 +74,7 @@ root@debian-2gb-hel1-1:~# hostname
 debian-2gb-hel1-1
 ```
 
-## 5. Update & Reboot for Security
+## Update & Reboot for Security
 
 Keep your server packages up-to-date for protection against vulnerabilities:
 

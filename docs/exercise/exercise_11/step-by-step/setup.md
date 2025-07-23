@@ -1,6 +1,6 @@
-# 🧭 Step-by-Step Guide: Provisioning a Secure Hetzner Server with Terraform
+# Step-by-Step Guide: Provisioning a Secure Hetzner Server with Terraform
 
-## 📁 1. Project Structure
+## Project Structure
 
 ```shell
 project-root/
@@ -10,7 +10,7 @@ project-root/
 └── secrets.auto.tfvars.template # Template for secure token handling
 ```
 
-## 🛠️ 2. Prerequisites
+## Prerequisites
 
 Make sure the following tools and configurations are available:
 
@@ -18,11 +18,11 @@ Make sure the following tools and configurations are available:
 - SSH keypair
 - Hetzner API Token from Hetzner Console
 
-## 🔐 3. Secure Your Hetzner API Token
+## Secure Your Hetzner API Token
 
 Avoid putting your token directly in `main.tf`.
 
-### 3.1 Prepare secret template
+### Prepare secret template
 
 Instead:
 
@@ -30,7 +30,7 @@ Instead:
 cp secrets.auto.tfvars.template secrets.auto.tfvars
 ```
 
-### 3.2 Edit the file and insert your API token
+### Edit the file and insert your API token
 
 ```shell
 nano secrets.auto.tfvars
@@ -42,7 +42,7 @@ Example:
 hcloud_token = "your_real_hetzner_token_here"
 ```
 
-## 🚀 4. Initialize and Deploy
+## Initialize and Deploy
 
 From the project root, run:
 
@@ -69,7 +69,7 @@ hello_datacenter = "hel1-dc2"
 hello_ip_addr = "37.27.206.215"
 ```
 
-## 🔐 5. SSH Login (No Password)
+## SSH Login (No Password)
 
 Login securely with your private key:
 

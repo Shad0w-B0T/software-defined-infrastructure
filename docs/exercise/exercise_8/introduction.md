@@ -3,7 +3,7 @@
 This guide explains how to securely access remote graphical applications (such as Firefox) via SSH using X11 forwarding,
 even when only port 22 (SSH) is open.
 
-## 1. Prepare the Remote Server
+## Prepare the Remote Server
 
 - Create a server as shown in:
   [Improve your server's security](/exercise/exercise_3/#improve-your-server-s-security)
@@ -12,7 +12,7 @@ even when only port 22 (SSH) is open.
 - Configure the firewall to allow only ICMP and port 22 (SSH). → This means NGINX will no longer be accessible
   externally.
 
-## 2. Install Required X11 Package on Remote Host
+## Install Required X11 Package on Remote Host
 
 [Update](/exercise/exercise_3/#_5-update-reboot-for-security) and install the xauth package — required for X11
 forwarding:
@@ -21,7 +21,7 @@ forwarding:
 root@debian-2gb-hel1-1:~# apt install xauth -y
 ```
 
-## 3. Reconnect with X11 Forwarding
+## Reconnect with X11 Forwarding
 
 Use the -Y option with SSH from your local machine:
 
@@ -52,7 +52,7 @@ That’s expected and automatically handled.
 Make sure you are running an X11 server locally.
 :::
 
-## 4. Install Firefox on Remote Host
+## Install Firefox on Remote Host
 
 Still inside the SSH session:
 
@@ -60,7 +60,7 @@ Still inside the SSH session:
 apt install firefox-esr -y
 ```
 
-## 5. Launch Firefox (Runs Remotely, Displays Locally)
+## Launch Firefox (Runs Remotely, Displays Locally)
 
 Run the browser — it will open on the server but display on your local desktop via the X11 tunnel:
 
@@ -72,8 +72,13 @@ root@debian-2gb-hel1-1:~# firefox &
 [GFX1-]: No GPUs detected via PCI
 ```
 
-These can usually be ignored — Firefox will still run. If it takes a while to launch, that’s normal. X11 forwarding can
-be slow, especially over internet.
+These can usually be ignored — Firefox will still run. If it takes a while to launch, that's normal. X11 forwarding can
+be slow, especially over the internet.
 
-<ImageWithCaption src="/images/exercise_8/firefoxx11.png" alt="Firefox launched remotely via X11 forwarding" :caption="'Firefox running over SSH X11 forwarding'" :number="1" />
+<ImageWithCaption 
+  src="/images/exercise_8/firefoxx11.png" 
+  alt="Firefox launched remotely via X11 forwarding" 
+  :caption="'Firefox running over SSH X11 forwarding'" 
+  :number="1" 
+/>
 
