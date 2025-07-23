@@ -4,15 +4,20 @@ This guide will walk you through the process of securing a basic server setup us
 You will learn how to:
 
 - create a secure server using only SSH key authentication
-- restrict access via a firewall (ICMP + SSH only);
-- set up and test a basic web server (NGINX);
-- understand the implications of firewalls for HTTP/SSH access.
+- restrict access via a firewall (ICMP + SSH only)
+- set up and test a basic web server (NGINX)
+- understand the implications of firewalls for HTTP/SSH access
 
 ## 1. Create a Secure Server with Minimal Access
 
-[Firewall Abschnitt](/exercise/exercise_1/firewall.html#_2-create-a-new-firewall)
+[Firewall Section](/exercise/exercise_1/firewall.html#_2-create-a-new-firewall)
 
-<ImageWithCaption src="/images/exercise_3/firewall_icmp_only.png" alt="" :caption="''" :number="1" />
+<ImageWithCaption 
+    src="/images/exercise_3/firewall_icmp_only.png" 
+    alt="Firewall rule creation"
+    :caption="'Firewall rule creation'" 
+    :number="1" 
+/>
 
 ## 2. Verify Ping (ICMP) Connectivity
 

@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import ImageWithCaption from './components/ImageWithCaption.vue'
 import ButtonLink from './components/ButtonLink.vue'
 import Accordion from './components/Accordion.vue'
+import './style.css'
 
 export default {
   ...DefaultTheme,
