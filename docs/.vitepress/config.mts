@@ -1,5 +1,6 @@
 import {defineConfig} from "vitepress";
 import {SearchPlugin} from "vitepress-plugin-search";
+import CodeImportPlugin from './plugins/code-import-plugin.js'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -420,6 +421,7 @@ export default defineConfig({
                 tokenize: "full",
                 //indexOptions: defaultOptions, // oder weglassen
             }),
+            CodeImportPlugin()
         ],
     },
 });

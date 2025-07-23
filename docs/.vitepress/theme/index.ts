@@ -10,5 +10,6 @@ export default {
     app.component('ImageWithCaption', ImageWithCaption)
     app.component('ButtonLink', ButtonLink)
     app.component('Accordion', Accordion)
+    app.component('Accordion', Accordion)
   }
 }
