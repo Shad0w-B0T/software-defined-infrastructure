@@ -46,5 +46,16 @@ echo "Hello World" | sudo tee /var/www/html/index.html > /dev/null
 
 Zugriffstest im Browser: Wenn du eine Seite siehst (auch mit Warnung wegen Staging-Zertifikat), ist das erstmal OK.
 
-<ImageWithCaption src="/images/exercise_23/cert_staging.png" alt="" :caption="''" :number="1" />
-<ImageWithCaption src="/images/exercise_23/cert_production.png" alt="" :caption="''" :number="2" />
+<ImageWithCaption 
+    src="/images/exercise_23/cert_staging.png" 
+    alt="" 
+    :caption="''" 
+    :number="1" 
+/>
+
+<ImageWithCaption
+    src="/images/exercise_23/cert_production.png" 
+    alt="" 
+    :caption="''"
+    :number="2"
+/>
