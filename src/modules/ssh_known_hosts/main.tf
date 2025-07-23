@@ -1,25 +1,49 @@
+locals {
+  entries_map = {
+    for entry in var.entries : entry.serverName => entry
+  }
+}
+
 resource "local_file" "known_hosts" {
-  content         = "${var.serverNameOrIp} ${var.serverHostPublicKey}"
+  for_each = local.entries_map
+
+  content         = "${each.value.serverNameOrIp} ${each.value.serverHostPublicKey}"
+  filename        = "${path.root}/gen/${each.key}/known_hosts"
+  file_permission = "0644"
+}
+
+resource "local_file" "aggregate_known_hosts" {
+  content = join("\n", [
+    for key, entry in local.entries_map :
+    "${entry.serverNameOrIp} ${entry.serverHostPublicKey}"
+  ])
+
   filename        = "${path.root}/gen/known_hosts"
   file_permission = "0644"
 }
 
 resource "local_file" "ssh_script" {
-  content         = templatefile("${path.module}/tpl/ssh.sh", {
-    ip        = var.serverNameOrIp,
-    loginUser = var.loginUserName
+  for_each = local.entries_map
+
+  content = templatefile("${path.module}/tpl/ssh.sh", {
+    ip        = each.value.serverNameOrIp,
+    loginUser = each.value.loginUserName
+    prefix    = each.key
   })
-  filename        = "${path.root}/bin/ssh"
+
+  filename        = "${path.root}/bin/ssh-${each.key}"
   file_permission = "0755"
-  depends_on      = [local_file.known_hosts]
 }
 
 resource "local_file" "scp_script" {
-  content         = templatefile("${path.module}/tpl/scp.sh", {
-    ip        = var.serverNameOrIp,
-    loginUser = var.loginUserName
+  for_each = local.entries_map
+
+  content = templatefile("${path.module}/tpl/scp.sh", {
+    ip        = each.value.serverNameOrIp,
+    loginUser = each.value.loginUserName
+    prefix    = each.key
   })
-  filename        = "${path.root}/bin/scp"
+
+  filename        = "${path.root}/bin/scp-${each.key}"
   file_permission = "0755"
-  depends_on      = [local_file.known_hosts]
 }
