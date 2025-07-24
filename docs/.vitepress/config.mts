@@ -36,22 +36,18 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: "Introduction", link: "/exercise/exercise_1/introduction.md"},
-                            {text: "Prerequisites", link: "/exercise/exercise_1/prerequisites.md"},
                             {
                                 text: "Step-by-Step Instruction",
-                                link: "/exercise/exercise_1/step-by-step.md",
                                 collapsed: true,
                                 items: [
-                                    {text: "1. Firewall", link: "/exercise/exercise_1/step-by-step/firewall.md"},
-                                    {text: "2. Create Server", link: "/exercise/exercise_1/step-by-step/create-server.md"},
-                                    {text: "3. Reset Root Password", link: "/exercise/exercise_1/step-by-step/reset-root-password.md"},
-                                    {text: "4. Connect Server", link: "/exercise/exercise_1/step-by-step/connect-server.md"},
-                                    {text: "5. Delete Server", link: "/exercise/exercise_1/step-by-step/delete-server.md"},
+                                    {text: "Firewall", link: "/exercise/exercise_1/step-by-step/firewall.md"},
+                                    {text: "Create Server", link: "/exercise/exercise_1/step-by-step/create-server.md"},
+                                    {text: "Reset Root Password", link: "/exercise/exercise_1/step-by-step/reset-root-password.md"},
+                                    {text: "Connect Server", link: "/exercise/exercise_1/step-by-step/connect-server.md"},
+                                    {text: "Delete Server", link: "/exercise/exercise_1/step-by-step/delete-server.md"},
                                 ]
                             },
                             {text: "Summary", link: "/exercise/exercise_1/summary.md"},
-                            {text: "References", link: "/exercise/exercise_1/references.md"},
-                            {text: "Code", link: "/exercise/exercise_1/code/code.md"},
                         ],
                     },
                     {
@@ -59,10 +55,8 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: "Introduction", link: "/exercise/exercise_2/introduction.md"},
-                            {text: "Prerequisites", link: "/exercise/exercise_2/prerequisites.md"},
                             {
                                 text: "Step-by-Step Instruction",
-                                link: "/exercise/exercise_2/step-by-step.md",
                                 collapsed: true,
                                 items: [
                                     {text: "List ip's", link: "/exercise/exercise_2/step-by-step/list.md"},
@@ -70,8 +64,6 @@ export default defineConfig({
                                 ],
                             },
                             {text: "Summary", link: "/exercise/exercise_2/summary.md"},
-                            {text: "References", link: "/exercise/exercise_2/references.md"},
-                            {text: "Code", link: "/exercise/exercise_2/code/code.md"},
                         ],
                     },
                     {

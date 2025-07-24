@@ -51,10 +51,10 @@ This is a standard SSH security prompt.
 It appears when your local machine has never connected to this IP address before and therefore does not have the host's
 key stored in the ~/.ssh/known_hosts file.
 
-- "Can't be established": Your system cannot verify the identity of the server automatically.
-- "Fingerprint": This is a unique identifier of the server's public SSH key.
+- `Can't be established`: Your system cannot verify the identity of the server automatically.
+- `Fingerprint`: This is a unique identifier of the server's public SSH key.
 You can manually verify it if the key was provided in advance.
-- "Are you sure...": This prompt ensures you're connecting to the intended server and not a malicious one
+- `Are you sure...`: This prompt ensures you're connecting to the intended server and not a malicious one
 (to prevent man-in-the-middle attacks).
 
 If you trust the source (e.g., you just created the server), type yes.

@@ -9,3 +9,9 @@ By the end of this task, you will have a secure and accessible cloud server read
 2. Then, create the server itself.
 3. Finally, reset the root password if necessary.
 
+## Prerequisites
+
+To follow this guide, make sure you have:
+
+- A Hetzner account with access to the Hetzner Cloud Console and an active project.
+- SSH installed on your local machine (typically preinstalled on Linux/macOS, or available via tools like Git Bash on Windows).
