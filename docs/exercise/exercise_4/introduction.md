@@ -15,5 +15,4 @@ memory for the duration of a session. Once unlocked, you won't need to reenter y
 
 To follow this guide, make sure you have:
 
-- A Hetzner account with access to the Hetzner Cloud Console and an active project.
 - SSH installed on your local machine (typically preinstalled on Linux/macOS, or available via tools like Git Bash on Windows).
