@@ -33,3 +33,9 @@ This module generates:
 - A `known_hosts` file for the server
 - Aggregated `known_hosts` file
 - SSH and SCP scripts that use those known hosts
+
+
+## Prerequisites
+
+- test
+- test

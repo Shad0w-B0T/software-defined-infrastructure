@@ -111,3 +111,9 @@ Once Terraform has finished:
 
 This setup is especially useful in learning environments and automated pipelines where consistent SSH identity and 
 reproducibility are critical.
+
+
+## Prerequisites
+
+- test
+- test

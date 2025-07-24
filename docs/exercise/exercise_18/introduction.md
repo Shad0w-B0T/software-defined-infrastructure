@@ -91,3 +91,9 @@ Then enter:
 
 - TTL is set to 10 seconds to allow quick propagation.
 - Use @ns1.hdm-stuttgart.cloud to query the authoritative server directly.
+
+
+## Prerequisites
+
+- test
+- test

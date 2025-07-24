@@ -274,3 +274,10 @@ If everything worked correctly:
 - You’ll see both `/dev/sdb1` and `/dev/sdb2` listed.
 - They will be mounted at `/disk1` and `/disk2`, respectively.
 - This confirms that your `fstab` entries are working and that the partitions are automatically mounted at boot time.
+
+
+
+## Prerequisites
+
+- test
+- test

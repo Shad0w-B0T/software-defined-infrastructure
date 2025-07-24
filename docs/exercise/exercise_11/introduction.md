@@ -104,3 +104,9 @@ secrets.auto.tfvars
 :::warning Important 
 Before committing your code, double-check with git status to confirm that the secrets file is ignored.
 :::
+
+
+## Prerequisites
+
+- test
+- test

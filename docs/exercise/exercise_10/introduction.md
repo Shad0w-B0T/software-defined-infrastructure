@@ -47,3 +47,9 @@ root@debian-2gb-hel1-1:/var/log# tail -f /var/log/auth.log
 2025-07-08T22:30:11.749239+00:00 debian-2gb-hel1-1 sshd[4474]: Connection reset by 45.140.17.26 port 43057
 2025-07-08T22:30:13.280993+00:00 debian-2gb-hel1-1 sshd[4475]: Connection closed by 14.63.166.251 port 57141 [preauth]
 ```
+
+
+## Prerequisites
+
+- test
+- test

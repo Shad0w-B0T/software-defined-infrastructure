@@ -55,3 +55,9 @@ value = "bin/scp <local-file> ${hcloud_ssh_key.loginUser.name}@${hcloud_server.h
 | `loginUserName`       | string | The login user on the VM                 |
 | `serverNameOrIp`      | string | IP or DNS name of the target             |
 | `serverHostPublicKey` | string | The server’s public key (OpenSSH format) |
+
+
+## Prerequisites
+
+- test
+- test

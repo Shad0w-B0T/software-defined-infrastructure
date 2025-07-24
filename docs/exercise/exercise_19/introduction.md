@@ -98,3 +98,9 @@ dig +short @ns1.hdm-stuttgart.cloud mail.g3.sdi.hdm-stuttgart.cloud
 - The trailing dot (`.`) in zone names and key names is important to ensure they are fully qualified.
 - You need appropriate permissions on the DNS server to perform dynamic updates; otherwise, you might get refused errors.
 - Use the `dig` commands above to verify your DNS records immediately after deployment.
+
+
+## Prerequisites
+
+- test
+- test

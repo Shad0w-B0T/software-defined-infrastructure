@@ -1,6 +1,9 @@
 # Introduction
 
-TBD
+## Prerequisites
+
+- test
+- test
 
 <ImageWithCaption 
     src="/images/exercise_24/cert_staging.png" 

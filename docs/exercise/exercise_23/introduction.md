@@ -1,6 +1,9 @@
 # Introduction
 
-TBD
+## Prerequisites
+
+- test
+- test
 
 Zertifikat kopieren auf den Server (per scp oder mit terraform provisioner):
 

@@ -85,3 +85,9 @@ root@debian-2gb-hel1-1:~# sudo updatedb
 ````
 
 Now there should be no result, confirming the file was removed and the index is up to date.
+
+
+## Prerequisites
+
+- test
+- test

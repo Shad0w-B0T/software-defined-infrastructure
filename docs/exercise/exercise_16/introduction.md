@@ -74,3 +74,9 @@ df -h | grep /volume1
 ```
 
 The volume should still be mounted. This confirms the `/etc/fstab` entry works on boot.
+
+
+## Prerequisites
+
+- test
+- test
