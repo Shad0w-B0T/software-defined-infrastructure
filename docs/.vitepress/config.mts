@@ -71,12 +71,11 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: "Introduction", link: "/exercise/exercise_3/introduction.md"},
-                            {text: "Prerequisites", link: "/exercise/exercise_3/prerequisites.md"},
                             {
                                 text: "Step-by-Step Instruction",
-                                link: "/exercise/exercise_3/step-by-step.md",
                                 collapsed: true,
                                 items: [
+                                    {text: "Create minimal server", link: "/exercise/exercise_3/step-by-step/create-minimal-server.md"},
                                     {text: "Setup Nginx", link: "/exercise/exercise_3/step-by-step/nginx.md"},
                                     {text: "Create SSH Key", link: "/exercise/exercise_3/step-by-step/ssh.md"},
                                 ],
