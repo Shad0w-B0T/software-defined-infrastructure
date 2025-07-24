@@ -9,7 +9,7 @@ output "datacenter" {
 }
 
 output "ssh_command" {
-  value = "bin/ssh"
+  value       = "bin/ssh"
   description = "SSH Wrapper command"
 }
 

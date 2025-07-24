@@ -24,7 +24,7 @@ resource "hcloud_firewall" "sshFw" {
 
 resource "hcloud_ssh_key" "loginUser" {
   name       = "my-local-key"
-  public_key = file("~/.ssh/id_ed25519.pub")
+  public_key = var.public_key
 }
 
 resource "hcloud_server" "helloServer" {

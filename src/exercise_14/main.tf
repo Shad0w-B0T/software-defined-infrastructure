@@ -14,24 +14,24 @@ provider "hcloud" {
 
 resource "hcloud_ssh_key" "loginUser" {
   name       = "my-local-key"
-  public_key = file("~/.ssh/id_ed25519.pub")
+  public_key = var.public_key
 }
 
 resource "hcloud_firewall" "fw_nginx" {
   name = "nginx-ssh-firewall"
 
   rule {
-    direction   = "in"
-    protocol    = "tcp"
-    port        = "22"
-    source_ips  = ["0.0.0.0/0", "::/0"]
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "22"
+    source_ips = ["0.0.0.0/0", "::/0"]
   }
 
   rule {
-    direction   = "in"
-    protocol    = "tcp"
-    port        = "80"
-    source_ips  = ["0.0.0.0/0", "::/0"]
+    direction  = "in"
+    protocol   = "tcp"
+    port       = "80"
+    source_ips = ["0.0.0.0/0", "::/0"]
   }
 }
 
@@ -47,10 +47,10 @@ resource "tls_private_key" "host" {
 
 # Generate cloud-init user data using template
 resource "local_file" "user_data" {
-  content  = templatefile("tpl/userData.yml", {
+  content = templatefile("tpl/userData.yml", {
     loginUser        = "devops",
-    ssh_public_key   = file("~/.ssh/id_ed25519.pub"),
-    host_private_key  = indent(4, tls_private_key.host.private_key_openssh),
+    ssh_public_key   = var.public_key,
+    host_private_key = indent(4, tls_private_key.host.private_key_openssh),
     host_public_key  = tls_private_key.host.public_key_openssh
   })
   filename = "gen/userData.yml"
@@ -76,11 +76,11 @@ resource "local_file" "scp_script" {
 
 
 resource "hcloud_server" "server" {
-  name           = "server"
-  image          = "debian-12"
-  server_type    = "cx22"
-  location       = "nbg1"
-  ssh_keys       = [hcloud_ssh_key.loginUser.id]
-  firewall_ids   = [hcloud_firewall.fw_nginx.id]
-  user_data      = local_file.user_data.content
+  name         = "server"
+  image        = "debian-12"
+  server_type  = "cx22"
+  location     = "nbg1"
+  ssh_keys     = [hcloud_ssh_key.loginUser.id]
+  firewall_ids = [hcloud_firewall.fw_nginx.id]
+  user_data    = local_file.user_data.content
 }
