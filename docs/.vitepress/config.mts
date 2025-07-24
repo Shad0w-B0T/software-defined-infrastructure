@@ -406,11 +406,10 @@ export default defineConfig({
                             inline.content = `${headingIndex} ${inline.content}`;
                         }
                     }
-                });
+                })
             });
         },
     },
-
     vite: {
         plugins: [
             SearchPlugin({

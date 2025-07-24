@@ -1,3 +1,27 @@
-# Code
+# Exercise 13
 
-TDB
+<script setup>
+import main from '../../../../src/exercise_13/main.tf?raw'
+import output from '../../../../src/exercise_13/outputs.tf?raw'
+import variables from '../../../../src/exercise_13/variables.tf?raw'
+import secrets from '../../../../src/exercise_13/secrets.auto.tfvars.template?raw'
+import userData from '../../../../src/exercise_13/tpl/userData.yml?raw'
+import CodeInclude from '../../../components/CodeInclude.vue'
+</script>
+
+
+``main.tf``
+<CodeInclude :content="main" />
+
+``outputs.tf``
+<CodeInclude :content="output" />
+
+``variables.tf``
+<CodeInclude :content="variables" />
+
+``secrets.auto.tfvars.template``
+<CodeInclude :content="secrets" />
+
+``userData.yml``
+<CodeInclude :content="userData" />
+
