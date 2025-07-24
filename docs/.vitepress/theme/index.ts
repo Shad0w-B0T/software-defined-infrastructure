@@ -5,10 +5,10 @@ import Accordion from './components/Accordion.vue'
 import './style.css'
 
 export default {
-    ...DefaultTheme,
-    enhanceApp({app}) {
-        app.component('ImageWithCaption', ImageWithCaption)
-        app.component('ButtonLink', ButtonLink)
-        app.component('Accordion', Accordion)
-    }
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('ImageWithCaption', ImageWithCaption)
+    app.component('ButtonLink', ButtonLink)
+    app.component('Accordion', Accordion)
+  }
 }
