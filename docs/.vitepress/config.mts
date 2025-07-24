@@ -81,7 +81,6 @@ export default defineConfig({
                                 ],
                             },
                             {text: "Summary", link: "/exercise/exercise_3/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_3/code/code.md"},
                         ],
                     },
                     {
@@ -92,7 +91,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_4/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_4/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_4/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_4/code/code.md"},
                         ],
                     },
                     {
@@ -103,7 +101,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_5/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_5/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_5/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_5/code/code.md"},
                         ],
                     },
                     {
@@ -114,7 +111,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_6/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_6/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_6/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_6/code/code.md"},
                         ],
                     },
                     {
@@ -125,7 +121,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_7/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_7/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_7/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_7/code/code.md"},
                         ],
                     },
                     {
@@ -136,7 +131,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_8/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_8/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_8/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_8/code/code.md"},
                         ],
                     },
                     {
@@ -147,7 +141,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_9/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_9/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_9/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_9/code/code.md"},
                         ],
                     },
                     {
@@ -158,7 +151,6 @@ export default defineConfig({
                             {text: "Prerequisites", link: "/exercise/exercise_10/prerequisites.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_10/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_10/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_10/code/code.md"},
                         ],
                     },
                 ]
