@@ -1,33 +1,23 @@
 # Exercise 23
 
-<script setup>
-import main from '../../../../src/exercise_23/main.tf?raw'
-import variables from '../../../../src/exercise_23/variables.tf?raw'
-import secrets from '../../../../src/exercise_23/secrets.auto.tfvars.template?raw'
-import output from '../../../../src/exercise_23/outputs.tf?raw'
-import cert from '../../../../src/exercise_23/cert.tf?raw'
-import dns from '../../../../src/exercise_23/dns.tf?raw'
-import userData from '../../../../src/exercise_23/tpl/userData.yml?raw'
-import CodeInclude from '../../../components/CodeInclude.vue'
-</script>
 
-## ``main.tf``
-<CodeInclude :content="main" />
+```file src/exercise_23/main.tf hcl
+```
 
-## ``variables.tf``
-<CodeInclude :content="variables" />
+```file src/exercise_23/variables.tf hcl
+```
 
-## ``outputs.tf``
-<CodeInclude :content="output" />
+```file src/exercise_23/outputs.tf hcl
+```
 
-## ``secrets.auto.tfvars.template``
-<CodeInclude :content="secrets" />
+```file src/exercise_23/secrets.auto.tfvars.template hcl
+```
 
-## ``cert.tf``
-<CodeInclude :content="cert" />
+```file src/exercise_23/cert.tf hcl
+```
 
-## ``dns.tf``
-<CodeInclude :content="dns" />
+```file src/exercise_23/dns.tf hcl
+```
 
-## ``userData.yml``
-<CodeInclude :content="userData" />
+```file src/exercise_23/tpl/userData.yml yml
+```

@@ -1,28 +1,19 @@
 # Exercise 13
 
-<script setup>
-import main from '../../../../src/exercise_13/main.tf?raw'
-import output from '../../../../src/exercise_13/outputs.tf?raw'
-import variables from '../../../../src/exercise_13/variables.tf?raw'
-import secrets from '../../../../src/exercise_13/secrets.auto.tfvars.template?raw'
-import userData from '../../../../src/exercise_13/tpl/userData.yml?raw'
-import CodeInclude from '../../../components/CodeInclude.vue'
-</script>
+```file src/exercise_13/main.tf hcl
+```
 
-## ``main.tf``
-<CodeInclude :content="main" />
+```file src/exercise_13/outputs.tf hcl
+```
 
-## ``outputs.tf``
-<CodeInclude :content="output" />
+```file src/exercise_13/variables.tf hcl
+```
 
-## ``variables.tf``
-<CodeInclude :content="variables" />
+```file src/exercise_13/secrets.auto.tfvars.template hcl
+```
 
-## ``secrets.auto.tfvars.template``
-<CodeInclude :content="secrets" />
-
-## ``userData.yml``
-<CodeInclude :content="userData" />
+```file src/exercise_13/tpl/userData.yml yml
+```
 
 This `cloud-config` file automates the initial setup of a Linux server.
 
@@ -51,4 +42,3 @@ During startup, the following commands are executed:
 - SSH configuration is modified to disable password and root login, and the SSH service is restarted.
 
 This results in a hardened, automatically configured web server that is ready to serve content securely.
-
