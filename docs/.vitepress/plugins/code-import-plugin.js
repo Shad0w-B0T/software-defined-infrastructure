@@ -13,15 +13,17 @@ export default function CodeImportPlugin() {
             return {
                 code: code.replace(fileImportRegex, (_, filePath, lang) => {
                     console.log("[CodeImportPlugin] Run", filePath)
+
                     const absPath = path.resolve(process.cwd(), filePath)
+                    const fileName = path.basename(filePath)
 
                     if (!fs.existsSync(absPath)) {
-                        return `**${filePath}**\n\n\`\`\`${lang}\n// ⚠ File not found: ${filePath}\n\`\`\``
+                        return `**${fileName}**\n\n\`\`\`${lang}\n// ⚠ File not found: ${filePath}\n\`\`\``
                     }
 
                     const fileContent = fs.readFileSync(absPath, 'utf-8')
 
-                    return `## \`${filePath}\`\n\n\`\`\`${lang}\n${fileContent.trim()}\n\`\`\``
+                    return `## \`${fileName}\`\n\n\`\`\`${lang}\n${fileContent.trim()}\n\`\`\``
                 })
             }
         }
