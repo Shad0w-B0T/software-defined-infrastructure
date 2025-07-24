@@ -1,6 +1,6 @@
 # Create a Secure Server with Minimal Access
 
-[Firewall Section](../exercise_1/step-by-step/firewall.md#create-a-new-firewall)
+[Firewall Section](../../exercise_1/step-by-step/firewall.md#create-a-new-firewall)
 
 <ImageWithCaption
 src="/images/exercise_3/firewall_icmp_only.png"
@@ -41,7 +41,7 @@ This is expected because port 22 is not yet open in the firewall.
 
 ## Enable SSH Access (Port 22)
 
-Add a new inbound rule to the [firewall](../exercise_1/step-by-step/firewall.md#create-a-new-firewall):
+Add a new inbound rule to the [firewall](../../exercise_1/step-by-step/firewall.md#create-a-new-firewall):
 - Protocol: **TCP**
 - Port: **22**
 
