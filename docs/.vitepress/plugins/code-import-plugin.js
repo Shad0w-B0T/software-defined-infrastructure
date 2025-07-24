@@ -16,7 +16,7 @@ export default function CodeImportPlugin() {
                     const absPath = path.resolve(process.cwd(), filePath)
 
                     if (!fs.existsSync(absPath)) {
-                        return `**${filePath}**\n\n\`\`\`${lang}\n// ⚠ Datei nicht gefunden: ${filePath}\n\`\`\``
+                        return `**${filePath}**\n\n\`\`\`${lang}\n// ⚠ File not found: ${filePath}\n\`\`\``
                     }
 
                     const fileContent = fs.readFileSync(absPath, 'utf-8')
