@@ -19,3 +19,4 @@ variable "server_name" {
 variable "server_aliases" {
   default = ["www", "mail"]
 }
+variable "public_key" {}

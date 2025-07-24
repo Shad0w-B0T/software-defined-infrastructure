@@ -4,3 +4,4 @@ variable "hcloud_token" {
   nullable    = false
   sensitive   = true
 }
+variable "public_key" {}

@@ -19,7 +19,7 @@ provider "hcloud" {
 
 resource "hcloud_ssh_key" "loginUser" {
   name       = "devops"
-  public_key = file("~/.ssh/id_ed25519.pub")
+  public_key = var.public_key
 }
 
 resource "hcloud_firewall" "firewall" {
@@ -45,7 +45,7 @@ resource "tls_private_key" "host" {
 resource "local_file" "user_data" {
   content = templatefile("tpl/userData.yml", {
     loginUser        = hcloud_ssh_key.loginUser.name,
-    ssh_public_key   = file("~/.ssh/id_ed25519.pub"),
+    ssh_public_key   = var.public_key,
     host_private_key = indent(4, tls_private_key.host.private_key_openssh),
     host_public_key  = tls_private_key.host.public_key_openssh
   })
