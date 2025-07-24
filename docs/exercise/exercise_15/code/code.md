@@ -8,26 +8,15 @@ import secrets from '../../../../src/exercise_15/secrets.auto.tfvars.template?ra
 import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
-``main.tf``
+## ``main.tf``
 <CodeInclude :content="main" />
 
-``outputs.tf``
+## ``outputs.tf``
 <CodeInclude :content="output" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
 
-```file src/exercise_14/main.tf hcl
-```
-
-```file src/exercise_14/outputs.tf hcl
-```
-
-```file src/exercise_14/secrets.auto.tfvars.template hcl
-```
-
-```file src/exercise_14/variables.tf hcl
-```

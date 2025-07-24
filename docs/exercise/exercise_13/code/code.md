@@ -9,36 +9,20 @@ import userData from '../../../../src/exercise_13/tpl/userData.yml?raw'
 import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
-
-``main.tf``
+## ``main.tf``
 <CodeInclude :content="main" />
 
-``outputs.tf``
+## ``outputs.tf``
 <CodeInclude :content="output" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
 
-``userData.yml``
+## ``userData.yml``
 <CodeInclude :content="userData" />
-
-```file src/exercise_13/main.tf hcl
-```
-
-```file src/exercise_13/outputs.tf hcl
-```
-
-```file src/exercise_13/secrets.auto.tfvars.template hcl
-```
-
-```file src/exercise_13/variables.tf hcl
-```
-
-```file src/exercise_13/tpl/userData.yml yml
-```
 
 This `cloud-config` file automates the initial setup of a Linux server.
 

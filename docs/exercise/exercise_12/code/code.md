@@ -11,35 +11,20 @@ import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
 
-``main.tf``
+## ``main.tf``
 <CodeInclude :content="main" />
 
-``outputs.tf``
+## ``outputs.tf``
 <CodeInclude :content="output" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
 
-``nginx-init.sh``
+## ``nginx-init.sh``
 <CodeInclude :content="nginx" />
 
-``Readme.md``
+## ``Readme.md``
 <CodeInclude :content="readme" />
-
-```file src/exercise_12/main.tf hcl
-```
-
-```file src/exercise_12/outputs.tf hcl
-```
-
-```file src/exercise_12/secrets.auto.tfvars.template hcl
-```
-
-```file src/exercise_12/variables.tf hcl
-```
-
-```file src/exercise_12/nginx-init.sh shell
-```

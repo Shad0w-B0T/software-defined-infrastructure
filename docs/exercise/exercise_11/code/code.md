@@ -9,26 +9,14 @@ import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
 
-``Main.tf``
+## ``Main.tf``
 <CodeInclude :content="main" />
 
-``outputs.tf``
+## ``outputs.tf``
 <CodeInclude :content="output" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
-
-```file src/exercise_11/main.tf hcl
-```
-
-```file src/exercise_11/outputs.tf hcl
-```
-
-```file src/exercise_11/secrets.auto.tfvars.template hcl
-```
-
-```file src/exercise_11/variables.tf hcl
-```

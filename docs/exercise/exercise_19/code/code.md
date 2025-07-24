@@ -8,14 +8,14 @@ import terraformVars from '../../../../src/exercise_19/terraform.auto.tfvars?raw
 import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
-``main.tf``
+## ``main.tf``
 <CodeInclude :content="main" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
 
-``terraform.auto.tfvars``
+## ``terraform.auto.tfvars``
 <CodeInclude :content="terraformVars" />

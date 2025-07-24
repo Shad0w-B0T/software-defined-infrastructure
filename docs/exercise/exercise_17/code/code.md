@@ -11,23 +11,23 @@ import ssh from '../../../../src/exercise_17/tpl/ssh.sh?raw'
 import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
-``main.tf``
+## ``main.tf``
 <CodeInclude :content="main" />
 
-``outputs.tf``
+## ``outputs.tf``
 <CodeInclude :content="output" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
 
-``userData.yml``
+## ``userData.yml``
 <CodeInclude :content="userData" />
 
-``scp.sh``
+## ``scp.sh``
 <CodeInclude :content="scp" />
 
-``ssh.sh``
+## ``ssh.sh``
 <CodeInclude :content="ssh" />

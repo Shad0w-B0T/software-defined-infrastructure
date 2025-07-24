@@ -11,23 +11,23 @@ import userData from '../../../../src/exercise_23/tpl/userData.yml?raw'
 import CodeInclude from '../../../components/CodeInclude.vue'
 </script>
 
-``main.tf``
+## ``main.tf``
 <CodeInclude :content="main" />
 
-``variables.tf``
+## ``variables.tf``
 <CodeInclude :content="variables" />
 
-``outputs.tf``
+## ``outputs.tf``
 <CodeInclude :content="output" />
 
-``secrets.auto.tfvars.template``
+## ``secrets.auto.tfvars.template``
 <CodeInclude :content="secrets" />
 
-``cert.tf``
+## ``cert.tf``
 <CodeInclude :content="cert" />
 
-``dns.tf``
+## ``dns.tf``
 <CodeInclude :content="dns" />
 
-``userData.yml``
+## ``userData.yml``
 <CodeInclude :content="userData" />
