@@ -1,10 +1,10 @@
 # Collection
 
-## How to Use Terraform 
+## How to Use Terraform
 
 This guide explains how to deploy your infrastructure using Terraform in a structured, repeatable manner.
 
-### 1. Initialize Terraform.
+### Initialize Terraform
 
 Before using Terraform, you must initialize the project directory. This process downloads the necessary provider plugins and prepares your environment.
 
@@ -12,7 +12,7 @@ Before using Terraform, you must initialize the project directory. This process 
 terraform init
 ```
 
-### 2. Preview the Execution Plan
+### Preview the Execution Plan
 
 To see the changes that Terraform will make without applying them, run the following command:
 
@@ -24,7 +24,7 @@ terraform plan
 This step is optional but highly recommended to verify your setup before deploying.
 :::
 
-### 3. Apply the Configuration
+### Apply the Configuration
 
 To create the defined infrastructure on the cloud provider, run:
 

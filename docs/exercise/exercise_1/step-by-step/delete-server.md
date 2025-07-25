@@ -27,7 +27,7 @@ If you plan to reuse the IP address later, **retain assigned IPs** when deleting
 This can help avoid DNS changes and speed up future setups.
 :::
 
-5. Confirm the deletion.  
+5. Confirm the deletion.
 
 ::: warning ⚠️ **Warning:**
 This action is irreversible and will permanently delete all data on the server.

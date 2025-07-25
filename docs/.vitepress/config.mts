@@ -160,10 +160,10 @@ export default defineConfig({
                             {text: "Introduction", link: "/exercise/exercise_11/introduction.md"},
                             {
                                 text: "Step-by-Step Instruction",
-                                link: "/exercise/exercise_11/step-by-step.md",
                                 collapsed: true,
                                 items: [
-                                    {text: "Setup", link: "/exercise/exercise_11/step-by-step/setup.md"},
+                                    {text: "Minimal Server", link: "/exercise/exercise_11/step-by-step/minimal_server.md"},
+                                    {text: "Secure Server", link: "/exercise/exercise_11/step-by-step/secure_server.md"},
                                 ]
                             },
                             {text: "Summary", link: "/exercise/exercise_11/summary.md"},
@@ -175,14 +175,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: "Introduction", link: "/exercise/exercise_12/introduction.md"},
-                            {
-                                text: "Step-by-Step Instruction",
-                                link: "/exercise/exercise_12/step-by-step.md",
-                                collapsed: true,
-                                items: [
-                                    {text: "Setup", link: "/exercise/exercise_12/step-by-step/setup.md"},
-                                ]
-                            },
+                            {text: "Step-by-Step Instruction", link: "/exercise/exercise_12/step-by-step.md"},
                             {text: "Summary", link: "/exercise/exercise_12/summary.md"},
                             {text: "Code", link: "/exercise/exercise_12/code/code.md"},
                         ],
@@ -192,14 +185,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: "Introduction", link: "/exercise/exercise_13/introduction.md"},
-                            {
-                                text: "Step-by-Step Instruction",
-                                link: "/exercise/exercise_13/step-by-step.md",
-                                collapsed: true,
-                                items: [
-                                    {text: "Setup", link: "/exercise/exercise_13/step-by-step/setup.md"},
-                                ]
-                            },
+                            {text: "Step-by-Step Instruction", link: "/exercise/exercise_13/step-by-step.md",},
                             {text: "Summary", link: "/exercise/exercise_13/summary.md"},
                             {text: "Code", link: "/exercise/exercise_13/code/code.md"},
                         ],
