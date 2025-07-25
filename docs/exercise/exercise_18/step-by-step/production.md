@@ -18,7 +18,7 @@ sudo nano /etc/nginx/sites-available/g3
 
 Insert the following configuration:
 
-```text
+```bash
 server {
     listen 80;
     server_name g3.sdi.hdm-stuttgart.cloud www.g3.sdi.hdm-stuttgart.cloud;
@@ -50,7 +50,7 @@ Certbot will automatically:
 
 Certbot will modify your Nginx config like this:
 
-```text
+```bash
 server {
     server_name g3.sdi.hdm-stuttgart.cloud www.g3.sdi.hdm-stuttgart.cloud;
 
@@ -105,7 +105,7 @@ sudo openssl x509 -in /etc/letsencrypt/live/g3.sdi.hdm-stuttgart.cloud/fullchain
 
 Expected output for a production certificate:
 
-```text
+```bash
 CA Issuers - URI:http://e6.i.lencr.org/
 ```
 

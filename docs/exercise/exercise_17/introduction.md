@@ -1,63 +1,29 @@
-# SSH Host Key Handling with Terraform Module
+# Introduction
 
-A module for safely managing SSH known hosts and wrapper scripts for ssh and scp access.
+This module provides a reusable solution to handle SSH host key verification in Terraform-managed Hetzner infrastructure.
+When creating new servers dynamically, standard SSH and SCP commands may fail or prompt for confirmation due to missing
+or mismatched host keys in `~/.ssh/known_hosts`.
 
-## Usage
+To solve this, the `SshKnownHosts` module generates:
 
-### Create your server and key
+- A custom `known_hosts` file based on the server’s IP and SSH public key
+- SSH and SCP wrapper scripts that enforce non-interactive, secure access using this ``known_hosts`` file
 
-```hcl
-resource "hcloud_server" "helloServer" {
-name = "hello"
-image = "debian-12"
-server_type = "cx22"
-ssh_keys = [hcloud_ssh_key.loginUser.name]
-}
-
-resource "tls_private_key" "host" {
-algorithm = "ED25519"
-}
-
-resource "hcloud_ssh_key" "loginUser" {
-name = "terraform-login-user"
-public_key = ...PATH_TO_KEY...
-}
-```
-
-### Use the SshKnownHosts module
-
-```hcl
-module "createSshKnownHosts" {
-source = "../Modules/SshKnownHosts"
-loginUserName = hcloud_ssh_key.loginUser.name
-serverNameOrIp = hcloud_server.helloServer.ipv4_address
-serverHostPublicKey = tls_private_key.host.public_key_openssh
-}
-```
-
-### Define outputs
-
-```hcl
-output "ssh_command" {
-value = "bin/ssh"
-description = "SSH Wrapper command"
-}
-
-output "scp_command" {
-value = "bin/scp <local-file> ${hcloud_ssh_key.loginUser.name}@${hcloud_server.helloServer.ipv4_address}:<target-path>"
-}
-```
-
-## Module inputs
-
-| Name                  | Type   | Description                              |
-| --------------------- | ------ | ---------------------------------------- |
-| `loginUserName`       | string | The login user on the VM                 |
-| `serverNameOrIp`      | string | IP or DNS name of the target             |
-| `serverHostPublicKey` | string | The server’s public key (OpenSSH format) |
-
+By using this module, you can replace custom script snippets across your Terraform projects with a single declarative 
+module block, simplifying infrastructure-as-code maintenance and improving reliability.
 
 ## Prerequisites
 
-- test
-- test
+Before using the `SshKnownHosts` module, ensure the following are in place:
+
+- A working Hetzner Cloud project with API token
+- Terraform CLI installed and initialized (`terraform init`)
+- An `hcloud_ssh_key` resource representing your login key
+- A provisioned server (`hcloud_server`) with a reachable IPv4 address
+- The SSH public host key for the server, provided via a `tls_private_key` resource or similar
+- Directory structure:
+    - `tpl/`: contains the wrapper script templates
+    - `gen/`: receives the generated `known_hosts` file
+    - `bin/`: receives the generated SSH and SCP wrapper scripts
+
+With these prerequisites satisfied, you can call the module like this:

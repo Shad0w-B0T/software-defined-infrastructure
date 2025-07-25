@@ -1,82 +1,45 @@
-# Custom Volume Mounting with Terraform & Cloud-init (Hetzner)
+# Introduction to Manual Volume Mounting via Cloud-init
 
-This guide documents how to:
+In this guide, you’ll learn how to manually define and configure a fixed mount point (e.g., `/volume01`) 
+for a Hetzner Cloud volume attached to a server instance.
+Unlike the default Hetzner behavior—where Cloud-init automatically mounts volumes to dynamically 
+generated paths like `/mnt/HC_Volume_*`—we’ll take full control over the mounting process.
 
-- Manually define a mount point for a Hetzner Cloud Volume (e.g. `/volume1`)
-- Avoid Terraform cyclic dependencies by decoupling volume and server creation
-- Use Cloud-init to configure and mount the volume automatically on first boot
-- Verify the correct configuration
+This is particularly useful in production environments where predictable mount points are required for 
+application configurations, backup scripts, or monitoring tools.
 
-## Terraform Resources Overview
+To achieve this, you'll decouple the creation of your cloud server and volume, 
+attach the volume explicitly without automounting, and then use Cloud-init to configure the desired 
+mount point and filesystem settings.
 
-- `hcloud_volume`: defines a 10 GB `xfs` volume (unattached)
-- `hcloud_server`: creates the instance with `cloud-init`
-- `hcloud_volume_attachment`: manually attaches the volume (with `automount = false`)
-- `templatefile`: generates the `userData.yml` from template and injects volume name + device
+## What You'll Learn
 
-::: warning 💡 Volume and server must be in the same region!
-For example: `location = "nbg1"` in both `hcloud_server` and `hcloud_volume`.
-:::
+- How to independently provision a server and volume in Hetzner Cloud
+- How to use `hcloud_volume_attachment` with `automount = false`
+- How to pass volume metadata (Linux device path and name) into your Cloud-init configuration
+- How to define a persistent and stable mount point like `/volume01`
+- How to automate fstab entry creation and mounting via Cloud-init
+- How to apply changes immediately with `systemctl daemon-reload` and `mount -a`
 
+## Why This Approach Matters
 
-## Verification Steps
+Automated mount paths like `/mnt/HC_Volume_102626366` are not predictable and can make automation, 
+documentation, or infrastructure reuse difficult.
+By explicitly defining mount points and controlling the mounting process through Cloud-init, 
+you ensure clarity, reproducibility, and maintainability in your infrastructure setup.
 
-After applying Terraform and booting the server:
-
-### Check that the mount point was created
-
-```shell
-ls -ld /volume1
-```
-
-Expected output:
-
-```shell
-drwxr-xr-x 2 root root 6 Jul 18 13:16 /volume1
-```
-
-### Check that `/etc/fstab` includes the volume
-
-```shell
-cat /etc/fstab | grep /volume1
-```
-
-Expected output:
-
-```shell
-/dev/disk/by-id/scsi-0HC_Volume_102928385 /volume1 xfs rw,defaults 0 2
-```
-
-### Check that the volume is mounted
-
-```shell
-df -h | grep /volume1
-```
-
-Expected output:
-
-```shell
-/dev/sdb         10G  104M  9.9G   2% /volume1
-```
-
-## Persistence Test
-
-Reboot the server:
-
-```shell
-sudo reboot
-```
-
-Then reconnect via SSH and re-run:
-
-```shell
-df -h | grep /volume1
-```
-
-The volume should still be mounted. This confirms the `/etc/fstab` entry works on boot.
-
+This pattern also mirrors best practices for production systems: 
+- decoupled resource management
+- explicit device control
+- declarative system configuration
 
 ## Prerequisites
 
-- test
-- test
+- Terraform CLI and a working Hetzner Cloud project setup
+- A Linux-compatible Cloud-init image (e.g., Debian or Ubuntu)
+- SSH access to the server
+- Familiarity with Terraform HCloud resources:
+    - `hcloud_server`
+    - `hcloud_volume`
+    - `hcloud_volume_attachment`
+- Basic knowledge of Cloud-init and fstab configuration

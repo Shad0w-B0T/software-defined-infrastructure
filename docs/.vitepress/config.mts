@@ -245,7 +245,6 @@ export default defineConfig({
                                 ]
                             },
                             {text: "Summary", link: "/exercise/exercise_18/summary.md"},
-                            {text: "Code", link: "/exercise/exercise_18/code/code.md"},
                         ],
                     },
                     {
