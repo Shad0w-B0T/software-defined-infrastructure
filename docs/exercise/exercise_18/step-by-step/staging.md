@@ -26,7 +26,8 @@ server {
 
 ## Enable the Site and Reload Nginx
 
-Create a symbolic link to enable the site configuration and verify the Nginx setup. Then, reload Nginx to apply the changes:
+Create a symbolic link to enable the site configuration and verify the Nginx setup. 
+Then, reload Nginx to apply the changes:
 
 ```shell
 sudo ln -s /etc/nginx/sites-available/g3 /etc/nginx/sites-enabled/
@@ -79,7 +80,12 @@ Once the staging certificate has been successfully issued and deployed, you can 
 Note that your browser will likely show a warning because the certificate was issued by Let's Encrypt's **staging environment**,
 which is intended for testing purposes and is **not trusted** by browsers.
 
-<ImageWithCaption src="/images/exercise_18/cert_staging.png" alt="HTTPS using staging" :caption="'The website is accessible via HTTPS, but the certificate is issued by Let\'s Encrypt\'s staging environment (not trusted in browsers)'" :number="1" />
+<ImageWithCaption 
+    src="/images/exercise_18/cert_staging.png" 
+    alt="HTTPS using staging" 
+    :caption="'The website is accessible via HTTPS, but the certificate is issued by Let\'s Encrypt\'s staging environment (not trusted in browsers)'" 
+    :number="1" 
+/>
 
 ## Verify Certificate (Optional)
 

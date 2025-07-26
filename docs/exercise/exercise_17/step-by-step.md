@@ -43,7 +43,7 @@ algorithm = "ED25519"
 
 resource "hcloud_ssh_key" "loginUser" {
 name = "terraform-login-user"
-public_key = ...PATH_TO_KEY...
+public_key = ...KEY...
 }
 ```
 
