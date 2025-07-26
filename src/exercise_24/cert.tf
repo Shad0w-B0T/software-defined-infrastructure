@@ -1,6 +1,6 @@
 provider "acme" {
-  # server_url = "https://acme-staging-v02.api.letsencrypt.org/directory" # staging
-  server_url = "https://acme-v02.api.letsencrypt.org/directory" # production
+  server_url = "https://acme-staging-v02.api.letsencrypt.org/directory" # staging
+  # server_url = "https://acme-v02.api.letsencrypt.org/directory" # production
 }
 
 resource "tls_private_key" "cert_key" {

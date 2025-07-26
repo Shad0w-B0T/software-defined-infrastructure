@@ -15,16 +15,17 @@ export default defineConfig({
         sidebar: [
             {
                 text: "Modules",
-                collapsed: true,
+                collapsed: false,
                 items: [
                     {text: "SSH known hosts", link: "/modules/known_hosts.md"},
                 ],
             },
             {
                 text: "Tools",
-                collapsed: true,
+                collapsed: false,
                 items: [
-                    {text: "Collection", link: "/collection/terraform.md"},
+                    {text: "Terraform", link: "/collection/terraform.md"},
+                    {text: "Hetzner Zombie Server", link: "/collection/hetzner-zombie.md"},
                 ],
             },
             {

@@ -27,24 +27,31 @@ project-root/
 
 ### 1. Add the module to your root module
 
+The following Terraform module is used to generate entries for an SSH `known_hosts` file:
+
 ```hcl
 module "createSshKnownHosts" {
-  source = "./Modules/SshKnownHosts"
-
+  source = "../modules/ssh_known_hosts"
   entries = [
     {
-      loginUserName       = "devops"
-      serverNameOrIp      = "workhorse.g3.sdi.hdm-stuttgart.cloud"
-      serverHostPublicKey = tls_private_key.workhorse.public_key_openssh
-    },
-    {
-      loginUserName       = "admin"
-      serverNameOrIp      = "backup.g3.sdi.hdm-stuttgart.cloud"
-      serverHostPublicKey = tls_private_key.backup.public_key_openssh
+      serverName          = hcloud_server.server.name              # The name of the server
+      loginUserName       = hcloud_ssh_key.loginUser.name          # The login user to associate with this host
+      serverNameOrIp      = hcloud_server.server.ipv4_address      # The IPv4/IPv6 address or hostname of the server
+      serverHostPublicKey = tls_private_key.host.public_key_openssh # The server’s public SSH host key
     }
   ]
 }
 ```
+
+Each entry in the `entries` array is transformed into a single line following the format:
+
+```text
+${entry.serverNameOrIp} ${entry.serverHostPublicKey}
+```
+
+Since `entries` is an array, you can define multiple hosts by simply adding more objects. 
+This allows you to flexibly manage SSH known hosts across your infrastructure.
+
 
 ### 2. Template files
 

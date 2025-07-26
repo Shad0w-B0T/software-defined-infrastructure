@@ -6,6 +6,9 @@
 
 **Fabio Kochendörfer** - fk126
 
+The documentation covers exercises **1** through **24**. Exercises 25 and 26 are not included, 
+as we only worked up to exercise 24 during the lecture
+
 ## About the Documentation
 
 The documentation is written in a **documentation-as-code** style. We use VitePress for this purpose, 
