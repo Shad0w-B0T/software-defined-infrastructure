@@ -1,41 +1,24 @@
-# DNS & SSH Known Hosts Automation for Multiple Servers with Terraform
+# Creating Multiple Hosts with Unique DNS and SSH Configuration
 
-## DNS Configuration
+This guide walks you through creating a configurable number of server instances with unique DNS records and 
+individual SSH access configurations using Terraform.
 
-The DNS setup uses the [HashiCorp DNS Provider](https://registry.terraform.io/providers/hashicorp/dns/latest) 
-to manage `A` records for each server.
+You will configure `serverCount`, `serverBaseName`, and a `dnsZone` in a `.tfvars` file, and Terraform will automatically:
 
-### Example: `A` Records Generation
-
-```hcl
-resource "dns_a_record_set" "canonical" {
-  for_each = local.server_ips
-
-  zone      = "${var.dnsZone}."
-  name      = each.key
-  addresses = [each.value]
-  ttl       = 10
-}
-```
-
-Terraform will create `A` records such as:
-
-```text
-work-1.g3.sdi.hdm-stuttgart.cloud. → 10.0.0.11
-work-2.g3.sdi.hdm-stuttgart.cloud. → 10.0.0.12
-...
-```
-
-## SSH Known Hosts Module
-
-This module generates:
-
-- A `known_hosts` file for the server
-- Aggregated `known_hosts` file
-- SSH and SCP scripts that use those known hosts
+- Provision N servers named `work-1`, `work-2`, ..., `work-N`
+- Register each server with a unique A record like `work-1.gxy.sdi.hdm-stuttgart.cloud`
+- Generate a unique SSH key pair for each server
+- Create per-server subdirectories (`work-1/`, `work-2/`, …), each containing:
+    - A `gen/known_hosts` file for SSH validation
+    - A `bin/ssh` wrapper script to connect securely via the DNS name
 
 
 ## Prerequisites
 
-- test
-- test
+- A subdomain delegated to your team, e.g., `gxy.sdi.hdm-stuttgart.cloud`
+- Access to the authoritative DNS server `ns1.hdm-stuttgart.cloud`
+- A valid TSIG HMAC key configured in your environment:
+
+```bash
+export HMAC="hmac-sha512:<key-name>:<base64-secret>"
+```
