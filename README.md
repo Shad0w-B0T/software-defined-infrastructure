@@ -1,13 +1,13 @@
 # Software Defined Infrastructure
 
-sommersemester 2025
+**Summer Semester 2025**
 
-dr092
-fk126
+**Daniel Riethmüller** - dr092
+**Fabio Kochendörfer** - fk126
 
 ## About the Documentation
 
-The documentation is written in a "code-as-documentation" style. We use VitePress for this purpose, 
+The documentation is written in a **documentation-as-code** style. We use VitePress for this purpose, 
 as tools like MkDocs or Sphinx would be overkill for our use case.
 It combines both a practical guide and task-based instructions.
 
