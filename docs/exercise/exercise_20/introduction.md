@@ -1,113 +1,33 @@
-# DNS & SSH Known Hosts Automation with Terraform
+# Creating a Host with DNS and SSH Access
 
-This project uses Terraform to:
+In this guide, you will provision a virtual machine (VM) and automatically configure both its DNS 
+records and SSH access setup.  
+The goal is to associate the server's generated IPv4 address with a DNS name like 
+`workhorse.gxy.sdi.hdm-stuttgart.cloud`, and to generate `known_hosts`, `ssh` and `scp`
+scripts that use this DNS name — not the raw IP.
 
-- Create DNS `A` and `CNAME` records
-- Automatically generate `known_hosts` files
-- Provide custom `ssh-<hostname>` and `scp-<hostname>` helper scripts
+This approach improves maintainability and readability while avoiding common SSH host key mismatch issues 
+when servers are re-provisioned with the same name.
 
+By the end, you will have:
 
-## DNS Configuration
-
-The DNS configuration uses the [HashiCorp DNS Provider](https://registry.terraform.io/providers/hashicorp/dns/latest) to manage A and CNAME records.
-
-### Example Setup
-
-```hcl
-terraform {
-  required_providers {
-    dns = {
-      source = "hashicorp/dns"
-    }
-  }
-}
-
-provider "dns" {
-  update {
-    server        = "ns1.sdi.hdm-stuttgart.cloud"
-    key_name      = var.dns_key_name
-    key_algorithm = "hmac-sha512"
-    key_secret    = var.dns_secret
-  }
-}
-
-# A record for canonical server name (e.g., workhorse.g3.sdi.hdm-stuttgart.cloud → 1.2.3.4)
-resource "dns_a_record_set" "canonical" {
-  zone      = "${var.dnsZone}."
-  name      = var.serverName
-  addresses = [var.serverIp]
-  ttl       = 10
-}
-
-# CNAME records (e.g., www/mail.g3.sdi.hdm-stuttgart.cloud → workhorse.g3.sdi.hdm-stuttgart.cloud)
-resource "dns_cname_record" "aliases" {
-  count = length(var.serverAliases)
-
-  zone  = "${var.dnsZone}."
-  name  = var.serverAliases[count.index]
-  cname = "${var.serverName}.${var.dnsZone}."
-  ttl   = 10
-}
-```
-
-### Required Variables
-
-```hcl
-variable "dnsZone" {
-  type        = string
-  description = "DNS zone (e.g. g3.sdi.hdm-stuttgart.cloud)"
-}
-
-variable "serverIp" {
-  type        = string
-  description = "IPv4 address of the server"
-}
-
-variable "serverName" {
-  type        = string
-  description = "Short hostname (e.g. workhorse)"
-}
-
-variable "serverAliases" {
-  type        = list(string)
-  description = "CNAME aliases (e.g. [\"www\", \"mail\"])"
-}
-
-variable "dns_key_name" {
-  type        = string
-  description = "TSIG key name (e.g. g3.key.)"
-}
-
-variable "dns_secret" {
-  type        = string
-  description = "TSIG key secret (base64-encoded)"
-}
-```
-
-## SSH Known Hosts Module
-
-This module generates:
-
-- A `known_hosts` file for the server
-- SSH and SCP script that use those known host
-
-```hcl
-module "createSshKnownHosts" {
-  source = "../modules/ssh_known_hosts"
-
-  entries = [
-    {
-      serverName          = hcloud_server.server.name                        # e.g., "workhorse"
-      loginUserName       = hcloud_ssh_key.loginUser.name                    # e.g., "devops"
-      serverNameOrIp      = "${var.serverName}.${var.dnsZone}" # e.g. workhorse.g3.sdi.hdm-stuttgart.cloud
-      serverHostPublicKey = tls_private_key.host.public_key_openssh         # e.g., "ssh-ed25519 AAAAC3Nza..."
-    }
-  ]
-}
-```
-
+- A provisioned cloud VM with a public IP
+- Corresponding `A` and `CNAME` records in your DNS zone
+- A `known_hosts` file containing the server’s DNS name and SSH public key
+- Wrapper scripts for `ssh` and `scp` using the DNS name instead of the IP address
 
 ## Prerequisites
 
-- test
-- test
+- A subdomain zone like `gxy.sdi.hdm-stuttgart.cloud` delegated to your group
+- Access to the authoritative DNS server: `ns1.hdm-stuttgart.cloud`
+- A valid TSIG HMAC key configured in your environment:
+
+```bash
+export HMAC="hmac-sha512:<key-name>:<base64-secret>"
+```
+
+- Terraform installed and working on your machine 
+- ``dig``, ``ssh`` and ``scp`` available in your environment 
+- A working Terraform SSH wrapper module (e.g., for generating ``gen/known_hosts``, ``bin/ssh``, ``bin/scp``)
+- A basic understanding of Terraform resource dependencies and template rendering
+
