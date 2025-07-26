@@ -3,6 +3,7 @@
 **Summer Semester 2025**
 
 **Daniel Riethmüller** - dr092
+
 **Fabio Kochendörfer** - fk126
 
 ## About the Documentation
