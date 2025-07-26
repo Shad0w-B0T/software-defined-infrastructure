@@ -29,21 +29,22 @@ project-root/
 
 ```hcl
 module "createSshKnownHosts" {
-  source = "./Modules/SshKnownHosts"
-
+  source = "../modules/ssh_known_hosts"
   entries = [
     {
-      loginUserName       = "devops"
-      serverNameOrIp      = "workhorse.g3.sdi.hdm-stuttgart.cloud"
-      serverHostPublicKey = tls_private_key.workhorse.public_key_openssh
-    },
-    {
-      loginUserName       = "admin"
-      serverNameOrIp      = "backup.g3.sdi.hdm-stuttgart.cloud"
-      serverHostPublicKey = tls_private_key.backup.public_key_openssh
+      serverName          = hcloud_server.server.name
+      loginUserName       = hcloud_ssh_key.loginUser.name
+      serverNameOrIp      = hcloud_server.server.ipv4_address
+      serverHostPublicKey = tls_private_key.host.public_key_openssh
     }
   ]
 }
+```
+
+or with host names
+
+```hcl
+
 ```
 
 ### 2. Template files

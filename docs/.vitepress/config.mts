@@ -24,7 +24,7 @@ export default defineConfig({
                 text: "Tools",
                 collapsed: true,
                 items: [
-                    {text: "Collection", link: "/collection/terraform.md"},
+                    {text: "Terraform", link: "/collection/terraform.md"},
                 ],
             },
             {
