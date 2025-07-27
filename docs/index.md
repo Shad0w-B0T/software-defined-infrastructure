@@ -26,7 +26,7 @@ features:
     link: /exercise/exercise_11/introduction.html
   - title: Tools
     details: How to use Terraform
-    link: /collection/terraform.html
+    link: /infrastructure-setup/terraform.html
   - title: Modules
     details: Modular SSH Access Management with Terraform for Cloud Infrastructure
     link: /modules/known_hosts.html

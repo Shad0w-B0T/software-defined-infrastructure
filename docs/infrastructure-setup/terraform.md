@@ -1,10 +1,8 @@
-# Collection
-
-## How to Use Terraform
+# How to Use Terraform
 
 This guide explains how to deploy your infrastructure using Terraform in a structured, repeatable manner.
 
-### Initialize Terraform
+## Initialize Terraform
 
 Before using Terraform, you must initialize the project directory. This process downloads the necessary provider plugins and prepares your environment.
 
@@ -12,7 +10,7 @@ Before using Terraform, you must initialize the project directory. This process 
 terraform init
 ```
 
-### Preview the Execution Plan
+## Preview the Execution Plan
 
 To see the changes that Terraform will make without applying them, run the following command:
 
@@ -24,7 +22,7 @@ terraform plan
 This step is optional but highly recommended to verify your setup before deploying.
 :::
 
-### Apply the Configuration
+## Apply the Configuration
 
 To create the defined infrastructure on the cloud provider, run:
 
@@ -57,12 +55,12 @@ this would be risky and error-prone.
 **Overwrites and resource mismatches**: If one person created infrastructure, others could not see or manage it unless 
 they had the exact same state file — which they didn't.
 
-## Why This Happens
+### Why This Happens
 
 Terraform doesn't know what someone else has deployed unless it has access to their `terraform.tfstate` file. 
 Without shared state, each user has a completely isolated view of the infrastructure.
 
-## The Correct Way: Remote State
+### The Correct Way: Remote State
 
 In team environments or shared infrastructures, the **right approach** is to use **remote state**. This allows all users to share a single,
 consistent view of the infrastructure.
