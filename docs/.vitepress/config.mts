@@ -22,10 +22,11 @@ export default withMermaid({
                 ],
             },
             {
-                text: "Tools",
+                text: "Collection",
                 collapsed: false,
                 items: [
                     {text: "Terraform", link: "/collection/terraform.md"},
+                    {text: "Terraform Environment", link: "/collection/environment.md"},
                     {text: "Hetzner Zombie Server", link: "/collection/hetzner-zombie.md"},
                 ],
             },
