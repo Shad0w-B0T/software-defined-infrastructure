@@ -1,8 +1,7 @@
 variable "dnsZone" {
-  description = "Base DNS zone (e.g. gxy.sdi.hdm-stuttgart.cloud)"
+  description = "Base DNS zone (e.g., gxy.sdi.hdm-stuttgart.cloud)"
   type        = string
 }
-
 
 variable "serverIp" {
   description = "IP address of the target server"
@@ -10,7 +9,7 @@ variable "serverIp" {
 }
 
 variable "serverName" {
-  description = "Canonical name of the server"
+  description = "Canonical (primary) name of the server"
   type        = string
 
   validation {
@@ -35,12 +34,12 @@ variable "serverAliases" {
 }
 
 variable "dns_key_name" {
-  description = "The TSIG key name (e.g., g12.key)"
+  description = "TSIG key name for DNS updates (e.g., g12.key)"
   type        = string
 }
 
 variable "dns_secret" {
-  description = "The TSIG shared secret"
+  description = "TSIG shared secret for DNS authentication"
   type        = string
   sensitive   = true
 }

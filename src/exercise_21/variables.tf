@@ -1,15 +1,15 @@
 variable "dnsZone" {
-  description = "Base DNS zone (e.g., gxy.sdi.hdm-stuttgart.cloud)"
+  description = "The base DNS zone where records will be created (e.g., gxy.sdi.hdm-stuttgart.cloud)."
   type        = string
 }
 
 variable "serverBaseName" {
-  description = "Prefix for server names (e.g., work)"
+  description = "The base name or prefix used for naming multiple servers (e.g., 'work' results in 'work-01', 'work-02', etc.)."
   type        = string
 }
 
 variable "serverCount" {
-  description = "Number of servers to create"
+  description = "The number of servers to create dynamically."
   type        = number
 
   validation {
@@ -19,12 +19,12 @@ variable "serverCount" {
 }
 
 variable "dns_key_name" {
-  description = "TSIG key name (e.g., g3.key)"
+  description = "The TSIG key name used for DNS challenge authentication (e.g., g3.key)."
   type        = string
 }
 
 variable "dns_secret" {
-  description = "TSIG shared secret"
+  description = "The TSIG shared secret used to securely authenticate DNS updates. Keep this secret safe."
   type        = string
   sensitive   = true
 }

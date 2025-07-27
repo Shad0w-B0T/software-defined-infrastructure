@@ -39,8 +39,7 @@ resource "hcloud_firewall" "fw_nginx" {
 resource "local_file" "user_data" {
   content  = templatefile("tpl/userData.yml", {
     loginUser           = "devops",
-    ssh_public_key      = var.public_key,
-    ssh_private_key     = indent(4, var.private_key)
+    ssh_public_key      = var.public_key
   })
   filename = "gen/userData.yml"
 }
