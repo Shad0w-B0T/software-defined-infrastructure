@@ -25,9 +25,9 @@ export default withMermaid({
                 text: "Infrastructure setup",
                 collapsed: false,
                 items: [
-                    {text: "Terraform", link: "/collection/terraform.md"},
-                    {text: "Terraform Environment", link: "/collection/environment.md"},
-                    {text: "Hetzner Zombie Server", link: "/collection/hetzner-zombie.md"},
+                    {text: "Terraform", link: "/infrastructure-setup/terraform.md"},
+                    {text: "Terraform Environment", link: "/infrastructure-setup/environment.md"},
+                    {text: "Hetzner Zombie Server", link: "/infrastructure-setup/hetzner-zombie.md"},
                 ],
             },
             {
