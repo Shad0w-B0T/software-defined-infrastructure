@@ -11,13 +11,11 @@ provider "acme" {
   server_url = "https://acme-staging-v02.api.letsencrypt.org/directory"
 }
 
-# Generiere privaten Schlüssel für das Zertifikat
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
   rsa_bits  = 2048
 }
 
-# Registrierung beim ACME-Server mit Email (kann dummy sein)
 resource "acme_registration" "reg" {
   account_key_pem = tls_private_key.private_key.private_key_pem
   email_address   = var.contact_mail
@@ -26,7 +24,7 @@ resource "acme_registration" "reg" {
 resource "acme_certificate" "wildcard_cert" {
   depends_on = [acme_registration.reg]
 
-  account_key_pem = tls_private_key.private_key.private_key_pem
+  account_key_pem = acme_registration.reg.account_key_pem
 
   common_name = "*.g3.sdi.hdm-stuttgart.cloud"
 

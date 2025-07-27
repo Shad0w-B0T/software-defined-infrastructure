@@ -23,7 +23,7 @@ resource "hcloud_ssh_key" "loginUser" {
 }
 
 resource "hcloud_firewall" "firewall" {
-  name = "nginx-ssh-firewall"
+  name = "nginx-ssh-firewall2"
   rule {
     direction  = "in"
     protocol   = "tcp"

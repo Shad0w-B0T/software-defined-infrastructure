@@ -1,5 +1,7 @@
 # Step-by-Step: Web certificate testing
 
+For the next steps, you will need the certificate and private key files generated in [Task 22](/exercise/exercise_22/introduction.html)
+
 ## Copy the Certificate to the Server
 
 Use either `scp` or a Terraform `remote-exec` provisioner to copy the generated files:

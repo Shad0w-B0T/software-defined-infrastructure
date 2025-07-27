@@ -1,5 +1,5 @@
 resource "local_file" "private_key_pem" {
-  content  = tls_private_key.private_key.private_key_pem
+  content  = acme_certificate.wildcard_cert.private_key_pem
   filename = "${path.module}/gen/private.pem"
 }
 

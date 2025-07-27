@@ -91,3 +91,69 @@ You can now install these files in your Nginx server or any TLS-enabled service.
 You may now test your certificate on a server and move to production by switching the ACME endpoint from 
 ``staging`` to ``production``.
 
+## Verifying `certificate.pem` and `private.pem`
+
+This topic explains how to verify your TLS certificate and private key files using OpenSSL.
+
+
+### Verify the Private Key
+
+```bash
+openssl rsa -in gen/private.pem -check
+```
+
+**Expected output:**
+
+```bash
+RSA key ok
+
+...
+```
+
+### Inspect and Validate the Certificate
+
+```bash
+openssl x509 -in gen/certificate.pem -text -noout
+```
+
+**Expected output:**
+
+```bash
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            2c:43:13:1a:45:34:c5:00:73:20:eb:12:a0:6e:e0:a0:89:81
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, O=(STAGING) Let's Encrypt, CN=(STAGING) Wannabe Watercress R11
+        Validity
+            Not Before: Jul 23 14:05:20 2025 GMT
+            Not After : Oct 21 14:05:19 2025 GMT
+        Subject: CN=*.g3.sdi.hdm-stuttgart.cloud
+```
+
+- Check the Common Name (CN): should be `*.g3.sdi.hdm-stuttgart.cloud`
+- Verify the Validity period under "Not Before" and "Not After"
+
+### Check if Certificate and Private Key Match
+
+Compare the modulus hashes of the certificate and the private key:
+
+```bash
+openssl x509 -noout -modulus -in gen/certificate.pem | openssl md5
+```
+
+```bash
+openssl rsa  -noout -modulus -in gen/private.pem     | openssl md5
+```
+
+Both hashes **must match**. Example output:
+
+```bash
+MD5(stdin)= 4cb8b64356536cd40e4fc0994e2b32ed
+MD5(stdin)= 4cb8b64356536cd40e4fc0994e2b32ed
+```
+
+### Automated Verification Script
+
+You can also use the included `verify.sh` script to automate these checks and confirm that the certificate and private key are valid and matching.
