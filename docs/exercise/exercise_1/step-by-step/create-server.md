@@ -57,12 +57,12 @@ Set up networking features like private networks, public IPs, and floating IPs.
 
 ## Assign a Firewall
 
-Attach a previously created firewall to protect your server.
+Attach a previously created [firewall](./firewall.md#create-a-new-firewall) to protect your server.
 
 <ImageWithCaption
   src="/images/exercise_1/server_6.png"
   alt="Server UI"
-  :caption="'Attaching a firewall to limit incoming traffic.'"
+  :caption="'Attaching a firewall to filter incoming traffic.'"
   :number="6"
 />
 

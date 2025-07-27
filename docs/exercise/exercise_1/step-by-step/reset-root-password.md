@@ -1,6 +1,7 @@
 # Root Access & Password Management
 
-If **no SSH key** is provided during server creation, Hetzner automatically generates a root password. This password is sent **via email** to the **owner of the organization** associated with the Hetzner Cloud account.
+If **no SSH key** is provided during server creation, Hetzner automatically generates a root password. 
+This password is sent **via email** to the **owner of the organization** associated with the Hetzner Cloud account.
 
 To manage or reset the root password manually, follow these steps:
 
@@ -20,6 +21,6 @@ After clicking **Reset Root Password**, a new password will be generated and dis
 <ImageWithCaption
   src="/images/exercise_1/root_password_2.png"
   alt="Server UI"
-  :caption="'The newly generated root password is shown here after reset'"
+  :caption="'The newly generated root password is shown after reset'"
   :number="2"
 />

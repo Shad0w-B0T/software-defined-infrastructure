@@ -32,8 +32,6 @@ Keep the two default inbound rules:
 
    - Port 22 (SSH) for remote server access
    - ICMP (Ping) for connectivity checks
-
-These are essential for server management.
 :::
 
 ## Name Your Firewall

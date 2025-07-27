@@ -38,8 +38,6 @@ Keeps sensitive information like tokens out of version control.
 - Simplifies switching between projects without modifying local files.
 - Works seamlessly with Terraform’s built-in variable loading mechanism.
 
-!!! warning
-
+::: warning ⚠️ **Warning:**
 If both `TF_VAR_*` and `.tfvars` values are present, Terraform uses the value from .tfvars unless explicitly overridden.
-
-!!!
+:::

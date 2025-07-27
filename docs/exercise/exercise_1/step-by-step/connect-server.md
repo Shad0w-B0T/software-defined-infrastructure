@@ -49,7 +49,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 
 This is a standard SSH security prompt.
 It appears when your local machine has never connected to this IP address before and therefore does not have the host's
-key stored in the ~/.ssh/known_hosts file.
+key stored in the ``~/.ssh/known_hosts`` file.
 
 - `Can't be established`: Your system cannot verify the identity of the server automatically.
 - `Fingerprint`: This is a unique identifier of the server's public SSH key.
@@ -62,7 +62,7 @@ The key will be saved locally, and the warning will not appear next time.
 
 ### Enter the Root Password
 
-After initiating the SSH connection and confirming the server's fingerprint, the system will prompt you to enter the **root password**
+After initiating the SSH connection and confirming the server's fingerprint, the system will prompt you to enter the **root password**.
 
 ```bash
 root@138.199.156.125's password:

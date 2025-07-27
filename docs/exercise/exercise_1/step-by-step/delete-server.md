@@ -22,14 +22,14 @@ To permanently remove a server from your infrastructure, follow these steps:
   :number="2"
 />
 
-::: tip 💡 Optional: Keep the IP Address
+::: tip 💡 Keep the IP Address
 If you plan to reuse the IP address later, **retain assigned IPs** when deleting a server.  
 This can help avoid DNS changes and speed up future setups.
 :::
 
 5. Confirm the deletion.
 
-::: warning ⚠️ **Warning:**
+::: warning ⚠️ **Warning**
 This action is irreversible and will permanently delete all data on the server.
 :::
 

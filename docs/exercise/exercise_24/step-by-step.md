@@ -199,7 +199,7 @@ alt="Staging Certificate Overview"
 
 The certificate is now issued by Let's Encrypt **production** environment.
 This is a valid certificate and should be accepted by all modern browsers without warnings.
-The issuing chain ends in the **R10 Intermediate CA**, which chains to **ISRG Root X1**. ([R10](/exercise/exercise_23/r10.html))
+The issuing chain ends in the **R10 Intermediate CA**, which chains to **ISRG Root X1**. ([R10](../exercise_23/r10.md))
 
 <ImageWithCaption  
 src="/images/exercise_24/cert_production.png"  

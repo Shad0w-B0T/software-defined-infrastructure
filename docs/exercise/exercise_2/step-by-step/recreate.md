@@ -1,5 +1,7 @@
 # Re-creation
 
+If you recreate a server, you can also reuse the same ip address as before.
+
 <ImageWithCaption
   src="/images/exercise_2/recreate_1.png"
   alt="Server UI"
@@ -32,7 +34,7 @@ Host key verification failed.
 
 This is an SSH security feature.
 
-When you first connect to a server, your SSH client saves the server’s host key in the ~/.ssh/known_hosts file.
+When you first connect to a server, your SSH client saves the server’s host key in the ``~/.ssh/known_hosts file``.
 
 If the host key for that IP address later changes (because a different server is now using that IP),
 SSH will detect a mismatch and show this warning to prevent you from unknowingly connecting to a potentially malicious server.
