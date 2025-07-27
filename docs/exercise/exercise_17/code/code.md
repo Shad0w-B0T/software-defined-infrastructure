@@ -12,9 +12,6 @@
 ```file src/exercise_17/secrets.auto.tfvars.template hcl
 ```
 
-```file src/exercise_17/tpl/userData.yml yml
-```
-
 ```file src/exercise_17/tpl/scp.sh sh
 ```
 

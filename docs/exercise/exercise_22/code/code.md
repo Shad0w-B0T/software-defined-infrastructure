@@ -10,5 +10,5 @@
 ```file src/exercise_22/outputs.tf hcl
 ```
 
-```file src/exercise_22/terraform.auto.tfvars hcl
+```file src/exercise_22/secrets.auto.tfvars.template hcl
 ```

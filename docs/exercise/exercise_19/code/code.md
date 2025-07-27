@@ -8,6 +8,3 @@
 
 ```file src/exercise_19/secrets.auto.tfvars.template hcl
 ```
-
-```file src/exercise_19/terraform.auto.tfvars hcl
-```

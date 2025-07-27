@@ -18,6 +18,3 @@
 
 ```file src/exercise_23/dns.tf hcl
 ```
-
-```file src/exercise_23/tpl/userData.yml yml
-```

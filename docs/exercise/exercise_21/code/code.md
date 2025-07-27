@@ -12,6 +12,3 @@
 
 ```file src/exercise_21/secrets.auto.tfvars.template hcl
 ```
-
-```file src/exercise_21/terraform.auto.tfvars hcl
-```
