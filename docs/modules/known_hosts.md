@@ -55,7 +55,7 @@ This allows you to flexibly manage SSH known hosts across your infrastructure.
 
 ### Template files
 
-Make sure the following templates exist in `modules/ssh_known_hosts/tpl`:
+Make sure the following templates exist in `modules/ssh_known_hosts/tpl`.
 
 ## Outputs
 

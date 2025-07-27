@@ -3,10 +3,10 @@
 [Firewall Section](../../exercise_1/step-by-step/firewall.md#create-a-new-firewall)
 
 <ImageWithCaption
-src="/images/exercise_3/firewall_icmp_only.png"
-alt="Firewall rule creation"
-:caption="'Firewall rule creation'"
-:number="1"
+    src="/images/exercise_3/firewall_icmp_only.png"
+    alt="Firewall rule creation"
+    :caption="'Firewall rule creation'"
+    :number="1"
 />
 
 ## Verify Ping (ICMP) Connectivity

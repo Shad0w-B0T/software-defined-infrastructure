@@ -118,7 +118,7 @@ hello_datacenter = "hel1-dc2"
 hello_ip_addr    = "37.27.206.215"
 ```
 
-Rewind: [Terraform commands](../../../collection/terraform.md#how-to-use-terraform)
+Rewind: [Terraform commands](../../../infrastructure-setup/terraform.md#how-to-use-terraform)
 
 ## SSH Login (No Password)
 

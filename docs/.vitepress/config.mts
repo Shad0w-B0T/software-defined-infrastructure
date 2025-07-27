@@ -22,7 +22,7 @@ export default withMermaid({
                 ],
             },
             {
-                text: "Collection",
+                text: "Infrastructure setup",
                 collapsed: false,
                 items: [
                     {text: "Terraform", link: "/collection/terraform.md"},
