@@ -65,7 +65,7 @@ If no SSH key is used:
 ## How to Improve This Setup
 
 To make this secure:
-- Use a `.tfvars` file for the token (see [Terraform Environment](/collection/environment.html))
+- Use a `.tfvars` file for the token (see [Terraform Environment](/infrastructure-setup/environment.html))
 - Add an `hcloud_ssh_key` resource
 - Attach the SSH key to the server using the `ssh_keys` argument
 

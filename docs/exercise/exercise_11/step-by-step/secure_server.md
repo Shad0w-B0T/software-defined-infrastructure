@@ -18,7 +18,7 @@ We take the config from the minimal server setup and extend it by:
 
 ### Secure Your Variables
 
-Avoid putting your token or key directly in `main.tf`. The other options is by following this guide about the [environment](/collection/environment.html).
+Avoid putting your token or key directly in `main.tf`. The other options is by following this guide about the [environment](/infrastructure-setup/environment.html).
 
 #### 1. Prepare a secret file from a template
 
