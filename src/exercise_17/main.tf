@@ -46,14 +46,12 @@ module "createSshKnownHosts" {
 }
 
 # Generate cloud-init user data using template
-resource "local_file" "user_data" {
-  content = templatefile("tpl/userData.yml", {
-    loginUser       = hcloud_ssh_key.loginUser.name,
-    ssh_public_key = var.public_key,
-    host_private_key = indent(4, tls_private_key.host.private_key_openssh),
-    host_public_key = tls_private_key.host.public_key_openssh
-  })
-  filename = "gen/userData.yml"
+module "user_data" {
+  source           = "../modules/user_data_minimal"
+  login_user       = hcloud_ssh_key.loginUser.name
+  ssh_public_key   = var.public_key
+  host_private_key = tls_private_key.host.private_key_openssh
+  host_public_key  = tls_private_key.host.public_key_openssh
 }
 
 resource "hcloud_server" "server" {
@@ -63,5 +61,5 @@ resource "hcloud_server" "server" {
   location    = "nbg1"
   ssh_keys = [hcloud_ssh_key.loginUser.id]
   firewall_ids = [hcloud_firewall.firewall.id]
-  user_data   = local_file.user_data.content
+  user_data   = module.user_data.user_data_content
 }

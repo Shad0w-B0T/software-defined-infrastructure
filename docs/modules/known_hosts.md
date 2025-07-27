@@ -12,7 +12,7 @@ It helps to avoid issues with OpenSSH host key mismatches and provides convenien
 
 ## Module Structure
 
-```shell
+```text
 project-root/
 └── modules/
     └── ssh_known_hosts/        # Terraform module to generate known_hosts + wrappers
@@ -25,7 +25,7 @@ project-root/
 
 ## Usage
 
-### 1. Add the module to your root module
+### Add the module to your root module
 
 The following Terraform module is used to generate entries for an SSH `known_hosts` file:
 
@@ -53,7 +53,7 @@ Since `entries` is an array, you can define multiple hosts by simply adding more
 This allows you to flexibly manage SSH known hosts across your infrastructure.
 
 
-### 2. Template files
+### Template files
 
 Make sure the following templates exist in `modules/ssh_known_hosts/tpl`:
 
