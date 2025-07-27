@@ -16,7 +16,7 @@ resource "acme_registration" "reg" {
 resource "acme_certificate" "cert" {
   depends_on = [acme_registration.reg]
 
-  account_key_pem = tls_private_key.cert_key.private_key_pem
+  account_key_pem = acme_registration.reg.account_key_pem
   common_name     = "*.${var.dns_zone}"
 
   dns_challenge {
