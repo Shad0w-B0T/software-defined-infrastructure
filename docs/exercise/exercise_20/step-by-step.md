@@ -19,7 +19,7 @@ project-root/
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── secrets.auto.tfvars.template
-│   └── terraform.auto.tfvars
+│   └── secrets.auto.tfvars
 ```
 
 ## DNS Configuration
