@@ -50,7 +50,7 @@ Move into the cloned repo:
 cd exercise
 ```
 
-Try:
+**Try**
 
 ```bash
 git pull

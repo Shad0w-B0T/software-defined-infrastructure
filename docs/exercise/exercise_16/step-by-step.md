@@ -11,8 +11,9 @@
 For example: `location = "nbg1"` in both `hcloud_server` and `hcloud_volume`.
 :::
 
-
 ## Verification Steps
+
+Reference: [Initialize and Deploy](../exercise_11/step-by-step/secure_server.md#deploy-instructions)
 
 After applying Terraform and booting the server:
 
@@ -22,7 +23,7 @@ After applying Terraform and booting the server:
 ls -ld /volume1
 ```
 
-Expected output:
+**Expected output:**
 
 ```shell
 drwxr-xr-x 2 root root 6 Jul 18 13:16 /volume1
@@ -34,7 +35,7 @@ drwxr-xr-x 2 root root 6 Jul 18 13:16 /volume1
 cat /etc/fstab | grep /volume1
 ```
 
-Expected output:
+**Expected output:**
 
 ```shell
 /dev/disk/by-id/scsi-0HC_Volume_102928385 /volume1 xfs rw,defaults 0 2
@@ -46,7 +47,7 @@ Expected output:
 df -h | grep /volume1
 ```
 
-Expected output:
+**Expected output:**
 
 ```shell
 /dev/sdb         10G  104M  9.9G   2% /volume1

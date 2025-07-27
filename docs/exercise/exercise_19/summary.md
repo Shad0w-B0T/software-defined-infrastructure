@@ -16,4 +16,4 @@ You learned how to:
 - [RFC 2845 – Secret Key Transaction Authentication for DNS (TSIG)](https://tools.ietf.org/html/rfc2845)
 - [`dig` Command Tutorial](https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/)
 - [Hetzner Cloud Documentation](https://docs.hetzner.com/)
-- [Terraform Input Variable Validation](https://developer.hashicorp.com/terraform/language/expressions/validation)
+- [Terraform Input Variable Validation](https://developer.hashicorp.com/terraform/plugin/framework/validation)

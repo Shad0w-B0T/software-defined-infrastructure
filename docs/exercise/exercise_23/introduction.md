@@ -7,7 +7,9 @@ You will create multiple DNS records and modify Nginx to serve HTTPS traffic usi
 You’ll test the validity of the certificate across multiple subdomains and learn how to inspect and troubleshoot HTTPS
 issues using a browser and Nginx tools.
 
-:::tip 💡 **Tip:** Always test with Let's Encrypt's **staging environment** before switching to the production 
+:::tip 💡 Tip
+
+Always test with Let's Encrypt's **staging environment** before switching to the production 
 ACME server to avoid rate limits or temporary bans.
 :::
 
@@ -18,6 +20,6 @@ ACME server to avoid rate limits or temporary bans.
 - Your `config.auto.tfvars` defines the domain and subdomains to use:
 
 ```hcl
-dnsZone     = "g03.sdi.hdm-stuttgart.cloud"
+dnsZone     = "g3.sdi.hdm-stuttgart.cloud"
 serverNames = ["www", "mail"]
 ```

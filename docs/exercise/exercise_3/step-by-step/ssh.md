@@ -15,8 +15,8 @@ ssh-keygen -a 256 -t ed25519 -C "$(hostname)-$(date +'%d-%m-%Y')"
 
 Explanation:
 
-- `-t ed25519`: Uses the Ed25519 algorithm, which is secure and faster than RSA.
-- `-a 256`: Increases the number of key derivation function (KDF) rounds, making brute-force attacks on your passphrase more difficult.
+- `-t ed25519`: Uses the **Ed25519** algorithm, which is more secure and faster than **RSA**.
+- `-a 256`: Increases the number of key derivation function rounds, making brute-force attacks on your passphrase more difficult.
 - `-C "$(hostname)-$(date +'%d-%m-%Y')"`: Adds a comment to help identify the key (e.g., server name and date).
 
 You will be prompted to:
@@ -45,7 +45,7 @@ A strong passphrase protects your private key in case it is stolen or exposed.
 
 A good passphrase should:
 
-- Be at least 15–20 characters long
+- Be at least **15–20** characters long
 - Include uppercase, lowercase, digits, and punctuation
 - Avoid personal information (like names, birthdays, etc.)
 - Be easy to remember but hard to guess

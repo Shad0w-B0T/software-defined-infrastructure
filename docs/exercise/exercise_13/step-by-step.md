@@ -8,8 +8,8 @@ project-root/
 ├── variables.tf                   # Variable definitions (token, ssh key, etc.)
 ├── outputs.tf                     # Outputs (e.g., IP address, datacenter)
 ├── tpl/
-│   └── userData.yml     # Cloud-init script for Nginx + Fail2Ban
-└── secrets.auto.tfvars.template  # API token template (DO NOT COMMIT)
+│   └── userData.yml               # Cloud-init script for Nginx + Fail2Ban
+└── secrets.auto.tfvars.template   # API token template (DO NOT COMMIT)
 ```
 
 ## Prepare Your Hetzner API Token
@@ -31,7 +31,7 @@ which is stored in the `gen/` directory.
 This approach allows for modular, reusable, and parameterized configuration — keeping secrets and environment-specific 
 values out of versioned source files.
 
-::: tip **Important:**  
+::: tip **Important**  
 The server must have **Python 3** installed, as well as the `python3-systemd` package.
 :::
 
@@ -41,7 +41,8 @@ If it is missing, `fail2ban` will **fail to start** with **exit code 255**, beca
 Make sure your `userData.yml` installs both packages during provisioning:
 
 ```bash
-apt install -y python3 python3-systemd
+python3
+python3-systemd
 ```
 
 ## Initialize and Deploy
@@ -51,7 +52,7 @@ Terraform configuration.
 
 Reference: [Initialize and Deploy](../exercise_11/step-by-step/secure_server.md#initialize-and-deploy-instructions)
 
-Example output:
+**Example output:**
 
 ```shell
 Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
@@ -66,7 +67,7 @@ ip_addr = "91.99.69.219"
 
 Once provisioning is complete, open the server’s public IP in a browser to see the default Nginx welcome page:
 
-> 91.99.69.219
+> http://91.99.69.219
 
 <ImageWithCaption
     src="/images/exercise_13/nginx_webserver.png"

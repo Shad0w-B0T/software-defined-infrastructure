@@ -1,7 +1,7 @@
 #  Understanding Firewalls Through a Web Server Setup
 
 Setting up a simple web server such as NGINX provides a practical, hands-on approach to learning about firewalls. 
-Since web servers require specific ports (e.g. 80 for HTTP) to be open for external access, this setup helps to 
+Since web servers require specific ports (e.g. `80` for HTTP) to be open for external access, this setup helps to 
 visualise how firewall rules control traffic. Changes (e.g. opening or blocking ports) can be tested immediately and 
 their effect on accessibility from both inside and outside the server can be understood. This method is ideal for 
 beginners looking to grasp basic network security concepts.
@@ -10,7 +10,13 @@ beginners looking to grasp basic network security concepts.
 
 Install NGINX, a lightweight and fast web server:
 
-```shell
+```bash
+apt install nginx
+```
+
+**Example output:**
+
+```bash
 root@debian-2gb-hel1-1:~# apt install nginx
 Reading package lists... Done
 Building dependency tree... Done
@@ -31,7 +37,13 @@ Processing triggers for man-db (2.11.2-2) ...
 
 Check if task is running on system:
 
-```shell
+```bash
+systemctl status nginx
+```
+
+**Example output:**
+
+```bash
 root@debian-2gb-hel1-1:~# systemctl status nginx
 ● nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; preset: enabled)
@@ -42,7 +54,13 @@ root@debian-2gb-hel1-1:~# systemctl status nginx
 
 Even without browser access, you can test the HTTP server locally:
 
-```shell
+```bash
+wget -O - http://46.62.153.100
+```
+
+**Example output:**
+
+```bash
 root@debian-2gb-hel1-1:~# wget -O - http://46.62.153.100
 --2025-07-08 21:13:18--  http://46.62.153.100/
 Connecting to 46.62.153.100:80... connected.
@@ -78,14 +96,18 @@ Commercial support is available at
 2025-07-08 21:13:18 (101 MB/s) - written to stdout [615/615]
 ```
 
-This confirms that NGINX is running and responding on port 80.
+This confirms that NGINX is running and responding on port `80`.
 
 ## External Browser Access Fails — Why?
 
-Try accessing http://46.62.153.100, Won’t load in the browser
+Try accessing 
+> http://46.62.153.100
+ 
+Won’t load in the browser
 
 **Why?**
-The firewall still blocks port 80, even though the server itself is working.
+
+The firewall still blocks port `80`, even though the server itself is working.
 
 ## Allow Port 80 in Firewall
 

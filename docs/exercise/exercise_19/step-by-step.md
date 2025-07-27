@@ -57,7 +57,7 @@ verify the records directly on your authoritative DNS server with the following 
 dig +noall +answer @ns1.hdm-stuttgart.cloud -y "hmac-sha512:${dns_key_name}:${dns_secret}" -t AXFR g3.sdi.hdm-stuttgart.cloud
 ```
 
-Expected output example:
+**Expected output example:**
 
 ```text
 g3.sdi.hdm-stuttgart.cloud. 600 IN SOA ns1.hdm-stuttgart.cloud. goik@hdm-stuttgart.de. 36 604800 86400 2419200 604800

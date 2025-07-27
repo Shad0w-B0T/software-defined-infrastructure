@@ -17,9 +17,8 @@ In this guide, you automated the provisioning and configuration of a server with
 ## Further Resources & References
 
 - [Terraform DNS Provider](https://registry.terraform.io/providers/hashicorp/dns/latest)
-- [Terraform Variable Validation](https://developer.hashicorp.com/terraform/language/expressions/validation)
+- [Terraform Input Variable Validation](https://developer.hashicorp.com/terraform/plugin/framework/validation)
 - [TSIG Authentication (RFC 2845)](https://datatracker.ietf.org/doc/html/rfc2845)
-- [SSH Key Management Best Practices](https://smallstep.com/blog/ssh-certificates/)
 - **Common Tools Used**:
     - [`dig`](https://linux.die.net/man/1/dig) — for querying DNS records
     - `ssh`, `scp` — secure access and file transfer

@@ -11,7 +11,7 @@ Issued a test TLS certificate using Let's Encrypt's staging environment with cer
 Verified that HTTPS works (with a browser warning) using the staging CA.
 Confirmed the certificate issuer to avoid hitting production rate limits during testing.
 
-## Staging Summary
+## Production Summary
 
 Cleaned up and reused the Nginx configuration.
 Requested a valid, trusted TLS certificate using the production Let's Encrypt CA.

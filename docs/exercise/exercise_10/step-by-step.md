@@ -42,3 +42,11 @@ root@debian-2gb-hel1-1:/var/log# tail -f /var/log/auth.log
 2025-07-08T22:30:11.749239+00:00 debian-2gb-hel1-1 sshd[4474]: Connection reset by 45.140.17.26 port 43057
 2025-07-08T22:30:13.280993+00:00 debian-2gb-hel1-1 sshd[4475]: Connection closed by 14.63.166.251 port 57141 [preauth]
 ```
+
+These log entries show various authentication-related events, including failed login attempts, invalid usernames, and connection resets. 
+Monitoring this file is a useful way to detect unauthorized access attempts or misconfigured clients in real time.
+
+::: tip Security Insight
+If you see frequent failed login attempts from unfamiliar IPs, it's a strong indication that your server is being scanned or
+targeted by bots. Consider setting up firewall rules (e.g., with ufw) or using tools like [fail2ban](https://github.com/fail2ban/fail2ban) to block repeated offenders automatically.
+:::

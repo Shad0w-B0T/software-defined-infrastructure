@@ -50,10 +50,10 @@ resource "hcloud_server" "helloServer" {
 
 1. Initializes the Hetzner Cloud provider.
 2. Authenticates using a token (inserted directly here, not secure).
-3. Creates a firewall named `ssh-firewall` allowing port 22 (SSH) from anywhere.
-4. Provisions a Debian 12 server with the firewall attached.
+3. Creates a firewall named `ssh-firewall` allowing port `22` (SSH) from anywhere.
+4. Provisions a **Debian 12** server with the firewall attached.
 
-::: warning ⚠️ WARNING:
+::: warning ⚠️ Warning
 **No SSH key is defined in this setup.**
 
 If no SSH key is used:
@@ -65,7 +65,7 @@ If no SSH key is used:
 ## How to Improve This Setup
 
 To make this secure:
-- Use a `.tfvars` file for the token
+- Use a `.tfvars` file for the token (see [Terraform Environment](/collection/environment.html))
 - Add an `hcloud_ssh_key` resource
 - Attach the SSH key to the server using the `ssh_keys` argument
 

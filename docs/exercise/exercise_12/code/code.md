@@ -14,7 +14,3 @@
 
 ```file src/exercise_12/nginx-init.sh sh
 ```
-
-```file src/exercise_12/Readme.md hcl
-```
-

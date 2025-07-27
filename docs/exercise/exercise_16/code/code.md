@@ -13,7 +13,7 @@
 ```file src/exercise_16/secrets.auto.tfvars.template hcl
 ```
 
-```file src src/exercise_16/tpl/userData.yml yml
+```file src/exercise_16/tpl/userData.yml yml
 ```
 
 

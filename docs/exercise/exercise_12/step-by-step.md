@@ -43,7 +43,7 @@ Terraform configuration.
 
 Reference: [Initialize and Deploy](../exercise_11/step-by-step/secure_server.md#deploy-instructions)
 
-Example output:
+**Example output:**
 
 ```shell
 Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
@@ -59,7 +59,7 @@ ip_addr = "91.99.69.219"
 Once provisioning is complete, open the public IP address in your browser to verify that Nginx is 
 running and serving the default page.
 
-> 91.99.69.219
+> http://91.99.69.219
 
 <ImageWithCaption 
     src="/images/exercise_12/nginx_webserver.png" 

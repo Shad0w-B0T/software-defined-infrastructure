@@ -85,7 +85,7 @@ server {
 
 ## Open in Browser
 
-::: warning ⚠️ **Important:**
+::: warning **Important**
 Make sure your Hetzner cloud firewall configuration allows **port 443** (HTTPS). Otherwise, secure access will not work externally.
 :::
 

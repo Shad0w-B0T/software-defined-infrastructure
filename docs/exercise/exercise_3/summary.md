@@ -1,8 +1,8 @@
 # Summary
 
-- Understand basic firewall configuration using ICMP and TCP rules.
+- Understand basic firewall configuration using **ICMP** and **TCP** rules.
 - Know how to test server reachability via `ping`.
-- Learn to enable SSH access by opening port 22 in the firewall.
+- Learn to enable SSH access by opening port `22` in the firewall.
 - Perform system updates and reboots for improved security.
 - Install and verify a web server (NGINX) locally and remotely.
 - Understand how firewall rules affect HTTP accessibility.

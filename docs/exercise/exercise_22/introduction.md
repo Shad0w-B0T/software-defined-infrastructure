@@ -1,13 +1,13 @@
 # Creating a Wildcard TLS Certificate with Let's Encrypt and Terraform
 
 This guide demonstrates how to programmatically obtain a **wildcard TLS certificate** for your DNS zone 
-(e.g., `g03.sdi.hdm-stuttgart.cloud`) using Terraform and the ACME protocol with DNS-based validation.
+(e.g., `g3.sdi.hdm-stuttgart.cloud`) using Terraform and the ACME protocol with DNS-based validation.
 
 You will use the `acme_certificate` resource in combination with the `rfc2136` DNS provider to generate a 
 wildcard certificate that secures:
 
-- Your zone apex (e.g., `g03.sdi.hdm-stuttgart.cloud`)
-- All subdomains via `*.g03.sdi.hdm-stuttgart.cloud`
+- Your zone apex (e.g., `g3.sdi.hdm-stuttgart.cloud`)
+- All subdomains via `*.g3.sdi.hdm-stuttgart.cloud`
 
 This approach is ideal for securing multiple web services (e.g., `www`, `mail`, `api`) 
 under the same domain with a single certificate.
@@ -26,8 +26,7 @@ You can then use these files in your web server (e.g., Nginx) for secure HTTPS h
 
 ## Prerequisites
 
-- You control a DNS zone (e.g., `g03.sdi.hdm-stuttgart.cloud`) and have access credentials for dynamic updates (RFC 2136)
-- Working Terraform project
+- You control a DNS zone (e.g., `g3.sdi.hdm-stuttgart.cloud`) and have access credentials for dynamic updates (RFC 2136)
 - Your `terraform` configuration includes:
     - The `acme` provider
     - The `rfc2136` DNS provider

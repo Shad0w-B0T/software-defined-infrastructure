@@ -1,6 +1,9 @@
 # Create a Secure Server with Minimal Access
 
-[Firewall Section](../../exercise_1/step-by-step/firewall.md#create-a-new-firewall)
+Create a server as in [task 1](/exercise/exercise_1/step-by-step/create-server.html). 
+When creating the [firewall](/exercise/exercise_1/step-by-step/firewall.md#create-a-new-firewall), only the ICMP protocol is allowed through.
+
+
 
 <ImageWithCaption
     src="/images/exercise_3/firewall_icmp_only.png"
@@ -37,7 +40,7 @@ ssh root@46.62.153.100
 ssh: connect to host 46.62.153.100 port 22: Connection refused
 ```
 
-This is expected because port 22 is not yet open in the firewall.
+This is expected because `port 22` is not yet open in the firewall.
 
 ## Enable SSH Access (Port 22)
 
@@ -67,6 +70,14 @@ debian-2gb-hel1-1
 ## Update & Reboot for Security
 
 Keep your server packages up-to-date for protection against vulnerabilities:
+
+```bash
+apt update
+apt upgrade
+reboot
+```
+
+**Example output:**
 
 ```shell
 root@debian-2gb-hel1-1:~# apt update

@@ -50,7 +50,7 @@ Use Let's Encrypt’s **staging environment** to avoid rate limits during testin
 sudo certbot --nginx --staging -d g3.sdi.hdm-stuttgart.cloud -d www.g3.sdi.hdm-stuttgart.cloud
 ```
 
-Example Output (Shortened)
+**Example Output (Shortened)**
 
 ```bash
 Enter email address (used for urgent renewal and security notices): dr092@hdm-stuttgart.de
@@ -69,7 +69,7 @@ Congratulations! You have successfully enabled HTTPS on:
 
 ## Open in browser
 
-::: warning ⚠️ **Important:**
+::: warning **Important**
 Make sure your Hetzner cloud firewall configuration allows **port 443** (HTTPS). Otherwise, secure access will not work externally.
 :::
 
@@ -98,7 +98,7 @@ Run the following command to inspect the certificate's issuer:
 sudo openssl x509 -in /etc/letsencrypt/live/g3.sdi.hdm-stuttgart.cloud/fullchain.pem -text | grep "CA Issuers"
 ```
 
-Expected output (for staging):
+**Expected output (for staging):**
 
 ```text
 CA Issuers - URI:http://stg-e5.i.lencr.org/

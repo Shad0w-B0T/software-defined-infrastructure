@@ -18,7 +18,7 @@ We take the config from the minimal server setup and extend it by:
 
 ### Secure Your Variables
 
-Avoid putting your token or key directly in `main.tf`.
+Avoid putting your token or key directly in `main.tf`. The other options is by following this guide about the [environment](/collection/environment.html).
 
 #### 1. Prepare a secret file from a template
 
@@ -37,62 +37,6 @@ Example:
 ```hcl
 # secrets.auto.tfvars
 hcloud_token = "your_real_hetzner_token_here"
-public_key   = "your_public_key"
-```
-
-## Terraform Configuration Snippets
-
-**File: `main.tf`**
-
-```hcl
-provider "hcloud" {
-  token = var.hcloud_token
-}
-
-resource "hcloud_firewall" "sshFw" {
-  name = "ssh-firewall"
-  rule {
-    direction   = "in"
-    protocol    = "tcp"
-    port        = "22"
-    source_ips  = ["0.0.0.0/0", "::/0"]
-  }
-}
-
-resource "hcloud_ssh_key" "loginUser" {
-  name       = "my-local-key"
-  public_key = var.public_key
-}
-
-resource "hcloud_server" "helloServer" {
-  name         = "hello"
-  image        = "debian-12"
-  server_type  = "cx22"
-  firewall_ids = [hcloud_firewall.sshFw.id]
-  ssh_keys     = [hcloud_ssh_key.loginUser.id]
-}
-```
-
-**File: `variables.tf`**
-
-```hcl
-variable "hcloud_token" {
-  description = "Hetzner API Token"
-  type        = string
-  nullable    = false
-  sensitive   = true
-}
-
-variable "public_key" {
-  description = "SSH Public Key for Server Login"
-  type        = string
-}
-```
-
-**File: `secrets.auto.tfvars.template`**
-
-```hcl
-hcloud_token = "your_api_token_goes_here"
 public_key   = "your_public_key"
 ```
 

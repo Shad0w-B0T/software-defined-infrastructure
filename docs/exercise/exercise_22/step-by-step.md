@@ -39,7 +39,7 @@ terraform apply
 
 Terraform automatically registers an ACME (Let's Encrypt) account using:
 
-- A generated RSA private key (2048 bits)
+- A generated RSA private key (**2048 bits**)
 - Your provided email address (can be a dummy)
 - The staging endpoint: `https://acme-staging-v02.api.letsencrypt.org/directory`
 

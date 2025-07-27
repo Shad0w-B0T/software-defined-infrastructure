@@ -45,7 +45,7 @@ dig +noall +answer @ns1.hdm-stuttgart.cloud www.g3.sdi.hdm-stuttgart.cloud
 dig +noall +answer @ns1.hdm-stuttgart.cloud g3.sdi.hdm-stuttgart.cloud
 ```
 
-Expected Output:
+**Expected Output:**
 
 ```bash
 www.g3.sdi.hdm-stuttgart.cloud. 10 IN A 168.119.226.35

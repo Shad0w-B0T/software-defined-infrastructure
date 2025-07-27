@@ -10,7 +10,9 @@ Run the following to see the current state of your disks:
 ```shell
 df -h
 ```
-Example output:
+
+**Example output**
+
 ```shell
 Filesystem      Size  Used Avail Use% Mounted on
 udev            1.9G     0  1.9G   0% /dev
@@ -102,7 +104,7 @@ Syncing disks.
 ```
 </Accordion>
 
-Then reboot:
+Then reboot the system:
 
 ```shell
 sudo reboot
@@ -143,7 +145,8 @@ Use the UUID to mount the second:
 sudo mount UUID=<your-uuid-here> /disk2
 ```
 
-Example:
+**Example output:**
+
 ```shell
 sudo mount UUID=dfe82aba-61a9-4b2d-b1a1-da009f3747ab /disk2
 ```

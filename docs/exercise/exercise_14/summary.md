@@ -23,4 +23,8 @@ This approach improves:
 - [Understanding Cloud-Init](https://cloudinit.readthedocs.io/)
 - [How SSH Host Key Verification Works](https://www.ssh.com/academy/ssh/host-key)
 
-> Tip: Always version-control your templates and generated files (excluding secrets) to improve transparency and collaboration.
+::: info
+
+Always version-control your templates and generated files (excluding secrets) to improve transparency and collaboration.
+
+:::

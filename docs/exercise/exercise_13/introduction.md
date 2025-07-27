@@ -5,8 +5,8 @@ and secure it with Fail2Ban using a cloud-init shell script.
 
 **Why Is Additional Security Like Fail2Ban Necessary?**
 
-As soon as a server with a public IP address comes online — especially with open standard ports like SSH (port 22) or HTTP
-(port 80) — it is typically discovered within minutes by automated bots and scanners from around the world. These actors attempt to gain access through various techniques, most commonly:
+As soon as a server with a public IP address comes online — especially with open standard ports like SSH (port `22`) or HTTP
+(port `80`) — it is typically discovered within minutes by automated bots and scanners from around the world. These actors attempt to gain access through various techniques, most commonly:
 
 - **Brute-force attacks** on SSH, often using common usernames like root, admin, or guessing weak passwords.
   [Fail2Ban – Why Brute-Force Attacks Are Common](https://www.fail2ban.org/wiki/index.php/Main_Page)

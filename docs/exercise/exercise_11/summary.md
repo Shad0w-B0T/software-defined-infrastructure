@@ -9,7 +9,7 @@ using Infrastructure as Code (IaC) principles.
 
 The project introduces two Terraform configurations:
 
-1. **Basic Setup** — A minimal Terraform script that provisions a Debian server with an open SSH port (22) and a Hetzner-managed root password (delivered via email).
+1. **Basic Setup** — A minimal Terraform script that provisions a Debian server with an open SSH port (`22`) and a Hetzner-managed root password (delivered via email).
 2. **Secure Setup** — An extended configuration using SSH keys and securely managed API tokens via `.tfvars` files. This setup eliminates the need for manual access credentials and enhances security.
 
 ## Key Features

@@ -33,7 +33,7 @@ how your systems use storage.
 - Tools available on the system: `fdisk`, `mkfs`, `mount`, `blkid`, `lsblk`, `df`, `udevadm`
 - Sudo or root privileges on the remote server
 
-::: tip 💡 Tip: 
+::: tip 💡 Tip 
 You’ll perform several steps manually after Terraform provisioning. 
 This helps you better understand how Linux manages disks beyond infrastructure automation. 
 :::

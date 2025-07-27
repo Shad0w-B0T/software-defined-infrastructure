@@ -8,7 +8,7 @@ ensuring trusted access to both `www` and root subdomains.
 By the end, you’ll have:
 
 - A public domain pointing to your server
-- Automatic HTTPS certificates for both `g03.sdi.hdm-stuttgart.cloud` and `www.g03.sdi.hdm-stuttgart.cloud`
+- Automatic HTTPS certificates for both `g3.sdi.hdm-stuttgart.cloud` and `www.g3.sdi.hdm-stuttgart.cloud`
 - TLS-enabled access with auto-renewal support
 
 This is based on 
@@ -19,12 +19,12 @@ adapted for Hetzner Cloud and Terraform-provisioned infrastructure.
 
 - A running Debian 11 server (e.g., provisioned via Terraform and Hetzner)
 - Nginx installed and running (basic HTML or reverse proxy)
-- Domain access to `*.sdi.hdm-stuttgart.cloud` (e.g., `g03.sdi.hdm-stuttgart.cloud`)
+- Domain access to `*.sdi.hdm-stuttgart.cloud` (e.g., `g3.sdi.hdm-stuttgart.cloud`)
 - Two DNS `A` records:
-    - `g03.sdi.hdm-stuttgart.cloud` → your server’s public IP
-    - `www.g03.sdi.hdm-stuttgart.cloud` → your server’s public IP
+    - `g3.sdi.hdm-stuttgart.cloud` → your server’s public IP
+    - `www.g3.sdi.hdm-stuttgart.cloud` → your server’s public IP
 - SSH access to the server
-- A configured firewall (e.g., Hetzner Cloud firewall allowing ports 22, 80, 443)
+- A configured firewall (e.g., Hetzner Cloud firewall allowing ports `22`, `80`, `443`)
 - Domain propagation verified via `dig` or `nslookup`
 - Root or `sudo` access on the server
 

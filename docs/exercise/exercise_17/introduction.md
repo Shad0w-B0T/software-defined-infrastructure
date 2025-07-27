@@ -25,5 +25,3 @@ Before using the `SshKnownHosts` module, ensure the following are in place:
     - `tpl/`: contains the wrapper script templates
     - `gen/`: receives the generated `known_hosts` file
     - `bin/`: receives the generated SSH and SCP wrapper scripts
-
-With these prerequisites satisfied, you can call the module like this:

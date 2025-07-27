@@ -100,7 +100,7 @@ fi
 
 ```
 
-Just like the [SSH wrapper](#ssh-wrapper-script-template-tplsshsh), this script ensures that scp uses the 
+Just like the [SSH wrapper](/exercise/exercise_14/step-by-step.html#ssh-wrapper-script-template-tpl-ssh-sh), this script ensures that scp uses the 
 ``gen/known_hosts`` file for verifying the server's identity. 
 It avoids the global ``~/.ssh/known_hosts`` entirely — solving issues with reused IPs and changing host keys.
 
@@ -111,7 +111,7 @@ It checks that at least two arguments are provided (source and destination) and 
 
 ## How to Connect
 
-Once Terraform has finished:
+Reference: [Initialize and Deploy](../exercise_11/step-by-step/secure_server.md#deploy-instructions)
 
 ### To SSH into the server:
 

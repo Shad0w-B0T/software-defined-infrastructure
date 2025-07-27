@@ -7,7 +7,7 @@ Goal:
 - Manage Hetzner API tokens securely
 - Use SSH key login instead of password login
 - Display Terraform output for IP address and data center
-- Enable project versioning via Git
+- Enable project versioning via Git (`.gitignore`)
 
 ## Prerequisites
 

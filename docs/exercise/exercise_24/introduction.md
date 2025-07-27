@@ -11,14 +11,14 @@ you reduce manual steps and ensure that your Nginx server is automatically secur
 
 ## Prerequisites
 
-- You have access to a DNS zone (e.g., `g03.sdi.hdm-stuttgart.cloud`) with write permissions
+- You have access to a DNS zone (e.g., `g3.sdi.hdm-stuttgart.cloud`) with write permissions
 - Your domain provider supports **RFC2136** for DNS updates (used for the DNS-01 challenge)
 - Terraform CLI is installed and initialized
 - Your Terraform configuration includes:
   - A `config.auto.tfvars` like:
 
 ```hcl
-dnsZone     = "g03.sdi.hdm-stuttgart.cloud"
+dnsZone     = "g3.sdi.hdm-stuttgart.cloud"
 serverNames = ["www", "mail"]
 ```
 
@@ -28,7 +28,7 @@ serverNames = ["www", "mail"]
 - DNS entries for your base domain and subdomains point to your Hetzner server's IP
 - SSH access to the server and permissions to install and restart `nginx`
 
-:::tip 🚨 **Important:**  
+:::tip 🚨 **Important**  
 Always test with Let’s Encrypt’s **staging directory** first (`https://acme-staging-v02.api.letsencrypt.org/directory`) 
 to avoid hitting rate limits. Switch to the production API only after verifying that your setup works.
 :::

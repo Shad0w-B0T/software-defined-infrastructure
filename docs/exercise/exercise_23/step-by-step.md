@@ -1,12 +1,8 @@
 # Step-by-Step: Web certificate testing
 
-For the next steps, you will need the certificate and private key files generated in [Task 22](/exercise/exercise_22/introduction.html)
-
 ## Copy the Certificate to the Server
 
 Use either `scp` or a Terraform `remote-exec` provisioner to copy the generated files:
-
-Copy the certificate to the server (via scp or with terraform provisioner):
 
 - `certificate.pem` → `/etc/ssl/certs/certificate.pem`
 - `private.pem` → `/etc/ssl/private/private.pem`
@@ -50,7 +46,7 @@ server {
 }
 ```
 
-The provided Nginx configuration sets up a server block to enable HTTPS for the domain g3.sdi.hdm-stuttgart.cloud.
+The provided Nginx configuration sets up a server block to enable HTTPS for the domain `g3.sdi.hdm-stuttgart.cloud`.
 
 Here's a breakdown of what each part does:
 
@@ -85,7 +81,8 @@ Run the following command to check for syntax errors and validate the configurat
 nginx -t
 ```
 
-Expected output:
+**Expected output:**
+
 ```bash
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful

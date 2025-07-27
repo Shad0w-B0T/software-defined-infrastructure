@@ -4,7 +4,7 @@
   [Improve your server's security](/exercise/exercise_3/introduction.html#improve-your-server-s-security)
 - Install NGINX:
   [Install NGINX](/exercise/exercise_3/step-by-step/nginx.html#install-and-run-a-web-server)
-- Configure the firewall to allow only ICMP and port 22 (SSH). → This means NGINX will no longer be accessible externally.
+- Configure the firewall to allow only ICMP and port `22` (SSH). → This means NGINX will no longer be accessible externally.
 
 ## Set up Local Port Forwarding
 

@@ -4,7 +4,7 @@
   [Improve your server's security](/exercise/exercise_3/introduction.html#improve-your-server-s-security)
 - Install NGINX:
   [Install NGINX](/exercise/exercise_3/step-by-step/nginx.html#install-and-run-a-web-server)
-- Configure the firewall to allow only ICMP and port 22 (SSH). → This means NGINX will no longer be accessible externally.
+- Configure the firewall to allow only ICMP and port `22` (SSH). → This means NGINX will no longer be accessible externally.
 
 ## Install the required X11 Package on Remote Host
 
@@ -17,7 +17,7 @@ root@debian-2gb-hel1-1:~# apt install xauth -y
 
 ## Reconnect with X11 Forwarding
 
-Use the -Y option with SSH from your local machine:
+Use the `-Y` option with SSH from your local machine:
 
 ```shell
 ssh -Y root@46.62.153.100                                    
@@ -66,8 +66,8 @@ root@debian-2gb-hel1-1:~# firefox &
 [GFX1-]: No GPUs detected via PCI
 ```
 
-These can usually be ignored — Firefox will still run. If it takes a while to launch, that's normal. X11 forwarding can
-be slow, especially over the internet.
+These messages are usually harmless — Firefox will still start. If the launch takes a little longer,
+that's expected: X11 forwarding can be noticeably slow, especially over internet connections.
 
 <ImageWithCaption
 src="/images/exercise_8/firefoxx11.png"
