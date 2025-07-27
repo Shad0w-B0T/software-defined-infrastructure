@@ -1,9 +1,9 @@
-import {defineConfig} from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 import {SearchPlugin} from "vitepress-plugin-search";
 import CodeImportPlugin from './plugins/code-import-plugin.js'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
     title: "Software Defined \n Infrastructure",
     description: "A VitePress Site",
     themeConfig: {
@@ -18,6 +18,7 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                     {text: "SSH known hosts", link: "/modules/known_hosts.md"},
+                    {text: "Minimal user data", link: "/modules/user_data_minimal.md"},
                 ],
             },
             {
@@ -294,6 +295,7 @@ export default defineConfig({
                         items: [
                             {text: "Introduction", link: "/exercise/exercise_23/introduction.md"},
                             {text: "Step-by-Step Instruction", link: "/exercise/exercise_23/step-by-step.md"},
+                            {text: "R10", link: "/exercise/exercise_23/r10.md"},
                             {text: "Summary", link: "/exercise/exercise_23/summary.md"},
                             {text: "Code", link: "/exercise/exercise_23/code/code.md"},
                         ],
