@@ -35,7 +35,6 @@ terraform plan
 terraform apply
 ```
 
-
 ## Register an ACME account (staging)
 
 Terraform automatically registers an ACME (Let's Encrypt) account using:
